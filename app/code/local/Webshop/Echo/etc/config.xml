@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Webshop_Echo>
+            <version>0.1.0</version>
+        </Webshop_Echo>
+    </modules>
+    <frontend>
+        <routers>
+            <echo>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_Echo</module>
+                    <frontName>echo</frontName>
+                </args>
+            </echo>
+        </routers>
+    </frontend>
+</config>

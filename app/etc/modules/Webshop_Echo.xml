@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Webshop_Echo>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Webshop_Echo>
+    </modules>
+</config>
