@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <default>
+        <reference name="header">
+            <block type="cms/block" name="menu">
+                <action method="setBlockId"><block_id>menu</block_id></action>
+            </block>
+        </reference>
         <reference name="footer">
         	<remove name="footer_links"/>
             <remove name="footer_links2"/>
