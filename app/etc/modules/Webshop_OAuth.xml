@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Webshop_RestConnect>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Webshop_RestConnect>
+    </modules>
+</config>
