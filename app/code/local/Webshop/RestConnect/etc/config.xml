@@ -4,17 +4,15 @@
             <version>0.1.0</version>
         </Webshop_RestConnect>
     </modules>
-    <global>
-        <events>
-            <controller_front_init_routers>
-                <observers>
-                    <Magentotutorial_configviewer_model_observer>
-                        <type>singleton</type>
-                        <class>Magentotutorial_Configviewer_Model_Observer</class>
-                        <method>checkForConfigRequest</method>
-                    </Magentotutorial_configviewer_model_observer>
-                </observers>
-            </controller_front_init_routers>
-        </events>
-    </global>
+    <frontend>
+        <routers>
+            <restconnect>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_RestConnect</module>
+                    <frontName>restconnect</frontName>
+                </args>
+            </restconnect>
+        </routers>
+    </frontend>
 </config>

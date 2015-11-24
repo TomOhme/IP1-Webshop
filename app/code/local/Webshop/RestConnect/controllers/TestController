@@ -15,13 +15,13 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
         //Basic parameters that need to be provided for oAuth authentication
         //on Magento
         $params = array(
-            'siteUrl' => 'http://127.0.0.1/magento/oauth',
-            'requestTokenUrl' => 'http://127.0.0.1/magento/oauth/initiate',
-            'accessTokenUrl' => 'http://127.0.0.1/magento/oauth/token',
-            'authorizeUrl' => 'http://127.0.0.1/magento/admin/oAuth_authorize', //This URL is used only if we authenticate as Admin user type
-            'consumerKey' => 'h7n8qjybu78cc3n8cdd5dr7ujtl33uqh', //Consumer key registered in server administration
-            'consumerSecret' => '2smfjx37a6e4w23jlcrya6iyv5v32fxr', //Consumer secret registered in server administration
-            'callbackUrl' => 'http://127.0.0.1/magento/restconnect/test/callback', //Url of callback action below
+            'siteUrl' => 'http://127.0.0.1/magento/index.php/oauth',
+            'requestTokenUrl' => 'http://127.0.0.1/magento/index.php/oauth/initiate',
+            'accessTokenUrl' => 'http://127.0.0.1/magento/index.php/oauth/token',
+            'authorizeUrl' => 'http://127.0.0.1/magento/index.php/admin/oAuth_authorize', //This URL is used only if we authenticate as Admin user type
+            'consumerKey' => '9a7fe824b69dc81faea1a0668c1f0dec', //Consumer key registered in server administration
+            'consumerSecret' => 'eda306642929637bdb9ff5169f573dbb', //Consumer secret registered in server administration
+            'callbackUrl' => 'http://127.0.0.1/magento/index.php/restconnect/test/callback', //Url of callback action below
         );
 
 
