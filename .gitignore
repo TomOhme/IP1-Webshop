@@ -139,7 +139,10 @@ skin/install/
 var/
 
 # Composer
+vendor
 coverage/
+composer.lock
+composer.phar
 
 .idea/
 magento.iml
