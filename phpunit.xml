@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./app/code/local/website.php" colors="true">
+	<filter>
+		<whitelist>
+			<directory>./app/code/local</directory>
+		</whitelist>
+	</filter>
+	<testsuites>
+		<testsuite name="Unit Testing">
+			<directory suffix="Test.php">./tests/</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>
