@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="footer">
+        	<remove name="footer_links"/>
+            <remove name="footer_links2"/>
+            <block type="cms/block" name="footer_posts">
+                <action method="setBlockId"><block_id>footer_sitemap</block_id></action>
+            </block>
+            <block type="cms/block" name="footer_news">
+                <action method="setBlockId"><block_id>footer_contact</block_id></action>
+            </block>
+        </reference>
+    </default>
+</layout>
