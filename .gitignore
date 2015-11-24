@@ -35,10 +35,11 @@ app/.htaccess
 app/bootstrap.php
 app/Mage.php
 app/code/core/
-app/code/community/Cm/
+app/code/community/
 app/code/community/Phoenix/
-app/design/adminhtml/default/default/
+app/design/adminhtml/
 app/design/frontend/base/
+app/design/frontend/default/
 app/design/frontend/rwd/
 app/design/frontend/default/blank/
 app/design/frontend/default/default/
