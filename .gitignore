@@ -1,4 +1,5 @@
 .htaccess.sample
+.htaccess
 .modgit/
 .modman/
 .DS_Store
