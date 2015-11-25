@@ -2,10 +2,11 @@
 <layout version="0.1.0">
     <default>
         <reference name="header">
-            <block type="cms/block" name="menu">
+      <!--      <block type="cms/block" name="menu">
                 <action method="setBlockId"><block_id>menu</block_id></action>
-            </block>
+            </block> -->
         </reference>
+
         <reference name="footer">
         	<remove name="footer_links"/>
             <remove name="footer_links2"/>
@@ -16,6 +17,10 @@
             <block type="cms/block" name="footer_news">
                 <action method="setBlockId"><block_id>footer_contact</block_id></action>
             </block>
+        </reference>
+
+        <reference name="cart_sidebar.extra_actions">
+            <remove name="paypal.partner.cart_sidebar.shortcut"/>
         </reference>
     </default>
 </layout>
