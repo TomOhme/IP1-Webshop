@@ -150,10 +150,10 @@
         </table>
 
         <?php if ($isVisibleProduct): ?>
-        <a href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Edit item')) ?>" class="btn-edit">
-            <?php echo $this->__('Edit item')?>
+        <!--<a href="<?php //echo $this->getConfigureUrl() ?>" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Edit item')) ?>" class="btn-edit">
+            <?php //echo $this->__('Edit item')?>
         </a>
-            |
+            |-->
             <?php if (!$this->isOnCheckoutPage()): ?>
                 <a href="<?php echo $this->getAjaxDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove This Item')) ?>"
                    data-confirm="<?php echo $this->__('Are you sure you would like to remove this item from the shopping cart?') ?>"
