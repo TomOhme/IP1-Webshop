@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Webshop_BackendProductgroupmanager>
+            <version>0.1.0</version>
+        </Webshop_BackendProductgroupmanager>
+    </modules>
+    <frontend>
+        <routers>
+            <backendproductgroupmanager>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_BackendProductgroupmanager</module>
+                    <frontName>bemngproductgroups</frontName>
+                </args>
+            </backendproductgroupmanager>
+        </routers>
+    </frontend>
+</config>

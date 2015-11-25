@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Webshop_BackendInterface>
+            <version>0.1.0</version>
+        </Webshop_BackendInterface>
+    </modules>
+    <frontend>
+        <routers>
+            <backendinterface>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_BackendInterface</module>
+                    <frontName>administrator</frontName>
+                </args>
+            </backendinterface>
+        </routers>
+    </frontend>
+</config>

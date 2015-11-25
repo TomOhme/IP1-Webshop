@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webshop_BackendInterface>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Webshop_BackendInterface>
+    </modules>
+</config>

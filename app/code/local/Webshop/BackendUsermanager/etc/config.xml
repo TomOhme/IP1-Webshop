@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Webshop_BackendUsermanager>
+            <version>0.1.0</version>
+        </Webshop_BackendUsermanager>
+    </modules>
+    <frontend>
+        <routers>
+            <backendusermanager>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_BackendUsermanager</module>
+                    <frontName>bemnguser</frontName>
+                </args>
+            </backendusermanager>
+        </routers>
+    </frontend>
+</config>
