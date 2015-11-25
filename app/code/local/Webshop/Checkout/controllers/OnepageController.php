@@ -31,6 +31,7 @@
  * @package     Mage_Checkout
  * @author      Magento Core Team <core@magentocommerce.com>
  */
+require_once 'Mage/Checkout/controllers/OnepageController.php';
 class Webshop_Checkout_OnepageController extends Mage_Checkout_OnepageController
 {
     /**
