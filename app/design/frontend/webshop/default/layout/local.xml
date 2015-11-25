@@ -9,6 +9,7 @@
         <reference name="footer">
         	<remove name="footer_links"/>
             <remove name="footer_links2"/>
+            <remove name="footer.newsletter"/>
             <block type="cms/block" name="footer_posts">
                 <action method="setBlockId"><block_id>footer_sitemap</block_id></action>
             </block>
