@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendSearch</module>
-                    <frontName>besearch</frontName>
+                    <frontName>backendsearch</frontName>
                 </args>
             </backendsearch>
         </routers>

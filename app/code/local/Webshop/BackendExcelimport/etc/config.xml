@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendExcelimport</module>
-                    <frontName>beexcelimport</frontName>
+                    <frontName>backendexcelimport</frontName>
                 </args>
             </backendexcelimport>
         </routers>

@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendUsermanager</module>
-                    <frontName>bemnguser</frontName>
+                    <frontName>backendusermanager</frontName>
                 </args>
             </backendusermanager>
         </routers>

@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendMailtemplate</module>
-                    <frontName>bemailtemplate</frontName>
+                    <frontName>backendmailtemplate</frontName>
                 </args>
             </backendmailtemplate>
         </routers>

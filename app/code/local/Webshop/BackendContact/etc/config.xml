@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendContact</module>
-                    <frontName>bemngcontact</frontName>
+                    <frontName>backendcontact</frontName>
                 </args>
             </backendcontact>
         </routers>

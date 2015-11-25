@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendInterface</module>
-                    <frontName>administrator</frontName>
+                    <frontName>backendinterface</frontName>
                 </args>
             </backendinterface>
         </routers>

@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendRabattsystem</module>
-                    <frontName>bemngrabatt</frontName>
+                    <frontName>backendrabattsystem</frontName>
                 </args>
             </backendrabattsystem>
         </routers>
