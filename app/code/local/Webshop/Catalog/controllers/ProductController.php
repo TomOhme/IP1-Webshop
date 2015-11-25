@@ -13,7 +13,7 @@ class Webshop_Catalog_ProductController extends Mage_Catalog_ProductController
      */
     public function viewAction()
     {
-        echo 'this is a module test';
+        //echo 'this is a module test';
 
         // Get initial data from request
         $categoryId = (int) $this->getRequest()->getParam('category', false);
