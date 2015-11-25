@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Webshop_BackendMailtemplate>
+            <version>0.1.0</version>
+        </Webshop_BackendMailtemplate>
+    </modules>
+    <frontend>
+        <routers>
+            <backendmailtemplate>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_BackendMailtemplate</module>
+                    <frontName>backendmailtemplate</frontName>
+                </args>
+            </backendmailtemplate>
+        </routers>
+    </frontend>
+</config>

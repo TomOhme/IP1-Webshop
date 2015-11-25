@@ -10,7 +10,7 @@
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendProductmanager</module>
-                    <frontName>bemngproducts</frontName>
+                    <frontName>backendproductmanager</frontName>
                 </args>
             </backendproductmanager>
         </routers>

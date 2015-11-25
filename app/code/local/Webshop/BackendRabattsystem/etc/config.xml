@@ -1,0 +1,18 @@
+<config>
+    <modules>
+        <Webshop_BackendRabattsystem>
+            <version>0.1.0</version>
+        </Webshop_BackendRabattsystem>
+    </modules>
+    <frontend>
+        <routers>
+            <backendrabattsystem>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_BackendRabattsystem</module>
+                    <frontName>backendrabattsystem</frontName>
+                </args>
+            </backendrabattsystem>
+        </routers>
+    </frontend>
+</config>
