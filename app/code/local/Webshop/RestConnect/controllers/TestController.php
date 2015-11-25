@@ -25,7 +25,7 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
         );
 
 
-        $oAuthClient = Mage::getModel('webshop_restconnect/oauth_client');
+        $oAuthClient = Mage::getModel('restconnect/oauthclient');
         $oAuthClient->reset();
 
         $oAuthClient->init($params);
@@ -36,7 +36,7 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
 
     public function callbackAction() {
 
-        $oAuthClient = Mage::getModel('webshop_restconnect/oauth_client');
+        $oAuthClient = Mage::getModel('Webshop_RestConnect/OauthClient');
         $params = $oAuthClient->getConfigFromSession();
         $oAuthClient->init($params);
 
