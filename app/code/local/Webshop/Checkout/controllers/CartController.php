@@ -303,6 +303,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
     /**
      * Action to reconfigure cart item
      */
+    /* remove function
     public function configureAction()
     {
         // Extract item and product to configure
@@ -333,6 +334,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
             return;
         }
     }
+    */
 
     /**
      * Update product configuration for a cart item
