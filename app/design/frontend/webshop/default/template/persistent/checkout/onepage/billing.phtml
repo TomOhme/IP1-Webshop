@@ -114,7 +114,10 @@
                     <div class="field">
                         <label for="billing:country_id" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                         <div class="input-box">
-                            <?php echo $this->getCountryHtmlSelect('billing') ?>
+                            <!--- remove standard country checkbox -->
+                            <?php //echo $this->getCountryHtmlSelect('billing') ?>
+                            <!--- own country selection to Switzerland --->
+                            <select name="billing[country_id]" id="billing:country_id" class="validate-select" title="Country"> <option value="CH" selected="selected">Schweiz</option></select>
                         </div>
                     </div>
                 </li>
