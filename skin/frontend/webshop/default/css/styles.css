@@ -4256,11 +4256,13 @@ p.product-name a:hover {
   position: relative;
   margin-bottom: 20px;
   text-align: center;
+  list-style-type: none;
 }
 .products-grid > li:after {
   content: '';
   display: table;
   clear: both;
+  list-style-type: none;
 }
 
 .products-grid .product-image {
