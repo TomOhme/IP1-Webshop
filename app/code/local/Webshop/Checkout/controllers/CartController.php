@@ -27,6 +27,7 @@
 /**
  * Shopping cart controller
  */
+require_once 'Mage/Checkout/controllers/CartController.php';
 class Webshop_Checkout_CartController extends Mage_Checkout_CartController
 {
     /**

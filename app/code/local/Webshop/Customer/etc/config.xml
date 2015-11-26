@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webshop_Customer>
+            <version>1.0</version>
+        </Webshop_Customer>
+    </modules>
+
+    <frontend>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <webshop_customer before="Mage_Customer">Webshop_Customer</webshop_customer>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+    </frontend>
+</config>
