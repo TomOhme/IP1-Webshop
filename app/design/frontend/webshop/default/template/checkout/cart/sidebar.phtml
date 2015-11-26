@@ -59,7 +59,7 @@
     <?php endif ?>
     <?php $_items = $this->getRecentItems() ?>
     <?php if(count($_items)): ?>
-        <p class="block-subtitle"><?php echo $this->__('Recently added item(s)') ?></p>
+        <p class="block-subtitle"><?php echo $this->__('Hinzugefügte Artikel') ?></p>
         <ol id="cart-sidebar" class="mini-products-list">
         <?php foreach($_items as $_item): ?>
             <?php echo $this->getItemHtml($_item) ?>
@@ -67,7 +67,7 @@
         </ol>
         <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
     <?php else: ?>
-        <p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+        <p class="empty"><?php echo $this->__('Sie haben keine Artikel im Warenkorb.') ?></p>
     <?php endif ?>
     <?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
         <div class="actions">

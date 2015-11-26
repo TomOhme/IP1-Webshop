@@ -43,7 +43,7 @@ if(empty($_cartQty)) {
 <div class="minicart-wrapper">
 
     <p class="block-subtitle">
-        <?php echo $this->__('Recently added item(s)') ?>
+        <?php echo $this->__('Hinzugefügte Artikel') ?>
         <a class="close skip-link-close" href="#" title="<?php echo $this->quoteEscape($this->__('Close')); ?>">&times;</a>
     </p>
 
@@ -77,7 +77,7 @@ if(empty($_cartQty)) {
                 <?php if ($this->canApplyMsrp()): ?>
                     <span class="map-cart-sidebar-total"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></span>
                 <?php else: ?>
-                    <span class="label"><?php echo $this->__('Cart Subtotal:') ?></span> <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+                    <span class="label"><?php echo $this->__('Warenkorb Subtotal:') ?></span> <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
                     <?php if ($_subtotalInclTax = $this->getSubtotalInclTax()): ?>
                         <br />(<?php echo Mage::helper('checkout')->formatPrice($_subtotalInclTax) ?> <?php echo Mage::helper('tax')->getIncExcText(true) ?>)
                     <?php endif; ?>
@@ -98,12 +98,12 @@ if(empty($_cartQty)) {
                 </ul>
             <?php endif ?>
             <a class="cart-link" href="<?php echo $this->getUrl('checkout/cart'); ?>">
-                <?php echo $this->__('View Shopping Cart'); ?>
+                <?php echo $this->__('Warenkorb ansehen'); ?>
             </a>
         </div>
 
     <?php else: ?>
-        <p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+        <p class="empty"><?php echo $this->__('Sie haben keine Artikel im Warenkorb.') ?></p>
 
     <?php endif ?>
 </div>
