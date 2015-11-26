@@ -1,4 +1,68 @@
 a
 {
-    color: red;
+    color: #2e8ab8;
+}
+a:hover{
+    color: #2e8ab8;
+}
+
+a:focus {
+    outline-color: #3091c2;
+    color: #143d52;
+}
+
+/*color settings footer */
+
+.footer .links a {
+    color: #636363;
+}
+.footer .links a:hover {
+color: #3399cc;}
+
+.footer .block-title,
+.footer address {
+    color: #3399cc;}
+
+
+.header-text{
+    height: 110px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.logo {
+    margin-top: -30px;
+}
+
+#info-header a, #info-header a:hover, #info-header a:visited {
+    color: white;
+}
+
+#info-header .alpha {
+    padding-left: 280px;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.picTelephoneNumber {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 3px auto 3px;
+}
+
+.picSwissFlag {
+    width: 29px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 3px auto 3px;
 }

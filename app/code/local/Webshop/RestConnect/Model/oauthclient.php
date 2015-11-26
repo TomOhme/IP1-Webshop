@@ -4,6 +4,7 @@
  * User: Yanick
  * Date: 24.11.15
  * Time: 13:13
+ * @Author: Yanick Schraner
  */
 class Webshop_RestConnect_Model_Oauthclient extends Mage_Core_Model_Abstract
 {
