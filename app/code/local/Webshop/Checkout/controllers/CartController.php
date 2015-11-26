@@ -234,7 +234,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
 
             if (!$this->_getSession()->getNoCartRedirect(true)) {
                 if (!$cart->getQuote()->getHasError()) {
-                    $message = $this->__('%s wurde dem Warenkorb hinzugefügt.', Mage::helper('core')->escapeHtml($product->getName()));
+                    $message = $this->__('%s wurde dem Warenkorb hinzugef&uuml;gt.', Mage::helper('core')->escapeHtml($product->getName()));
                     $this->_getSession()->addSuccess($message);
                 }
                 $this->_goBack();
@@ -256,7 +256,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
                 $this->_redirectReferer(Mage::helper('checkout/cart')->getCartUrl());
             }
         } catch (Exception $e) {
-            $this->_getSession()->addException($e, $this->__('Produkt kann nicht dem Warenkorb hinzugefügt werden.'));
+            $this->_getSession()->addException($e, $this->__('Produkt kann nicht dem Warenkorb hinzugef&uuml;gt werden.'));
             Mage::logException($e);
             $this->_goBack();
         }
@@ -290,7 +290,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
                     $this->_getSession()->addError($e->getMessage());
                 }
             } catch (Exception $e) {
-                $this->_getSession()->addException($e, $this->__('Produkt kann nicht dem Warenkorb hinzugefügt werden.'));
+                $this->_getSession()->addException($e, $this->__('Produkt kann nicht dem Warenkorb hinzugefï¿½gt werden.'));
                 Mage::logException($e);
                 $this->_goBack();
             }
@@ -618,7 +618,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
                 $result['content'] = $this->getLayout()->getBlock('minicart_content')->toHtml();
 
                 $result['success'] = 1;
-                $result['message'] = $this->__('Item was removed successfully.');
+                $result['message'] = $this->__('Artikel wurde erfolgreich entfernt.');
                 Mage::dispatchEvent('ajax_cart_remove_item_success', array('id' => $id));
             } catch (Exception $e) {
                 $result['success'] = 0;
@@ -668,7 +668,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
                 $result['qty'] = $this->_getCart()->getSummaryQty();
 
                 if (!$quoteItem->getHasError()) {
-                    $result['message'] = $this->__('Item was updated successfully.');
+                    $result['message'] = $this->__('Artikel wurde erfolgreich editiert..');
                 } else {
                     $result['notice'] = $quoteItem->getMessage();
                 }

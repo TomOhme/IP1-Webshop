@@ -50,7 +50,7 @@ Default layout, loads most of the pages
         <!-- Mage_Customer -->
         <reference name="top.links">
             <action method="addLink" translate="label title" module="customer"><label>Mein Account</label><url helper="customer/getAccountUrl"/><title>Mein Account</title><prepare/><urlParams/><position>10</position></action>
-            <action method="addLink" translate="label title before_text" module="customer"><label>Register</label><url helper="customer/getRegisterUrl" /><title>Register</title><prepare/><urlParams/><position>100</position><li/><a/></action>
+            <action method="addLink" translate="label title before_text" module="customer"><label>Registrieren</label><url helper="customer/getRegisterUrl" /><title>Registrieren</title><prepare/><urlParams/><position>100</position><li/><a/></action>
         </reference>
         <reference name="footer_links2">
             <action method="addLink" translate="label title" module="catalog"><label>Mein Account</label><url helper="customer/getAccountUrl" /><title>Mein Account</title></action>
@@ -77,7 +77,7 @@ Load this update on every page when customer is logged out
             <block type="customer/form_login" name="customer_form_mini_login" before="-" template="customer/form/mini.login.phtml"/>
         </reference>-->
         <reference name="top.links">
-            <action method="addLink" translate="label title" module="customer"><label>Log In</label><url helper="customer/getLoginUrl"/><title>Log In</title><prepare/><urlParams/><position>100</position></action>
+            <action method="addLink" translate="label title" module="customer"><label>Anmelden</label><url helper="customer/getLoginUrl"/><title>Anmelden</title><prepare/><urlParams/><position>100</position></action>
         </reference>
         <remove name="reorder"></remove>
     </customer_logged_out>
