@@ -17,14 +17,9 @@
         </routers>
     </frontend>
     <global>
-        <!-- ... -->
         <models>
             <restconnect>
                 <class>Webshop_RestConnect_Model</class>
-                <!--
-                need to create our own resource, can't just
-                use core_resource
-                -->
                 <resourceModel>restconnect_resource</resourceModel>
             </restconnect>
             <restconnect_resource>
@@ -36,6 +31,10 @@
                 </entities>
             </restconnect_resource>
         </models>
-        <!-- ... -->
+        <helpers>
+            <restconnect>
+                <class>Webshop_RestConnect_Helper</class>
+            </restconnect>
+        </helpers>
     </global>
 </config>

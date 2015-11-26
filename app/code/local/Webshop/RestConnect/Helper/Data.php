@@ -1,17 +1,22 @@
 <?php
 
 /**
- *
- * @author     Darko Goleš <darko.goles@inchoo.net> and Yanick Schraner
- * @package    Webshop
- * @subpackage RestConnect
- *
- * Url of controller is: http://127.0.0.1/magento/restconnect/test/[action]
+ * Created by IntelliJ IDEA.
+ * User: Yanick Schraner
+ * Date: 26.11.15
+ * Time: 09:04
+ * @Author: Yanick Schraner
  */
-class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Action {
+class Webshop_RestConnect_Helper_Data extends Mage_Core_Helper_Abstract
+{
+    /**
+     * Returns all Products with all attributes
+     * More Information: http://devdocs.magento.com/guides/m1x/api/rest/Resources/Products/products.html
+     * @return JSON Products
+     */
 
-    public function indexAction() {
-
+    public function initOauth(){
+        /*
         //Basic parameters that need to be provided for oAuth authentication
         //on Magento
         $params = array(
@@ -30,12 +35,9 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
 
         $oAuthClient->init($params);
         $oAuthClient->authenticate();
-
-        return;
     }
 
-    public function callbackAction() {
-
+    public function getAllProducts(){
         $oAuthClient = Mage::getModel('restconnect/oauthclient');
         $params = $oAuthClient->getConfigFromSession();
         $oAuthClient->init($params);
@@ -47,23 +49,26 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
         }
 
         $restClient = $acessToken->getHttpClient($params);
-
         // In Magento it is neccesary to set json or xml headers in order to work
         $restClient->setHeaders('Accept', 'application/json');
-
         // Set REST resource URL
-        $restClient->setUri('http://127.0.0.1/magento/index.php/api/rest/products');
+        $restClient->setUri('http://127.0.0.1/magento/api/rest/products');
         // Get method
         $restClient->setMethod(Zend_Http_Client::GET);
 
         //Make REST request
         $response = $restClient->request();
+        return $response;
 
-        Zend_Debug::dump($response);
-        return;
-    }
-    public function newAction(){
-        $callbackUrl = "http://127.0.0.1/magento/restconnect/test/new";
+*/
+
+
+
+
+
+
+        // $callbackUrl is a path to your file with OAuth authentication example for the Admin user
+        $callbackUrl = "http://127.0.0.1/restconnect/test";
         $temporaryCredentialsRequestUrl = "http://127.0.0.1/magento/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
         $adminAuthorizationUrl = 'http://127.0.0.1/magento/admin/oAuth_authorize';
         $accessTokenRequestUrl = 'http://127.0.0.1/magento/oauth/token';
@@ -71,6 +76,7 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
         $consumerKey = '9a7fe824b69dc81faea1a0668c1f0dec';
         $consumerSecret = 'eda306642929637bdb9ff5169f573dbb';
 
+        //session_start();
         if (!isset($_GET['oauth_token']) && isset($_SESSION['state']) && $_SESSION['state'] == 1) {
             $_SESSION['state'] = 0;
         }
@@ -95,13 +101,28 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
                 exit;
             } else {
                 $oauthClient->setToken($_SESSION['token'], $_SESSION['secret']);
+
                 $resourceUrl = "$apiUrl/products";
-                $oauthClient->fetch($resourceUrl);
+                $oauthClient->fetch($resourceUrl, array(), 'GET', array('Content-Type' => 'application/json'));
                 $productsList = json_decode($oauthClient->getLastResponse());
                 print_r($productsList);
             }
         } catch (OAuthException $e) {
-            print_r($e);
+            print_r($e->getMessage());
+            echo "&lt;br/&gt;";
+            print_r($e->lastResponse);
         }
+    }
+
+    public function getProductByID(){
+
+    }
+
+    public function getAllCustomers(){
+
+    }
+
+    public function getAllCategories(){
+
     }
 }
