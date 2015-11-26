@@ -113,7 +113,7 @@ All tags page
         <label>Customer My Account My Tags List</label>
         <update handle="customer_account"/>
         <reference name="root">
-            <action method="setHeaderTitle" translate="title" module="customer"><title>My Account</title></action>
+            <action method="setHeaderTitle" translate="title" module="customer"><title>Mein Account</title></action>
         </reference>
         <reference name="my.account.wrapper">
             <block type="tag/customer_tags" name="customer_tags" template="tag/customer/tags.phtml"/>
@@ -124,7 +124,7 @@ All tags page
         <label>Customer My Account Tag View</label>
         <update handle="customer_account"/>
         <reference name="root">
-            <action method="setHeaderTitle" translate="title" module="customer"><title>My Account</title></action>
+            <action method="setHeaderTitle" translate="title" module="customer"><title>Mein Account</title></action>
         </reference>
         <reference name="my.account.wrapper">
             <block type="tag/customer_view" name="customer_view" template="tag/customer/view.phtml"/>
