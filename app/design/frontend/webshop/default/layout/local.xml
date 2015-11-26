@@ -23,6 +23,10 @@
             <remove name="paypal.partner.cart_sidebar.shortcut"/>
         </reference>
 
+        <reference name="header">
+            <block type="core/template" name="wc-customheadblock" template="wc-customheadblock.phtml" />
+        </reference>
+
         <reference name="right">
             <remove name="catalog.compare.sidebar"/>
         </reference>

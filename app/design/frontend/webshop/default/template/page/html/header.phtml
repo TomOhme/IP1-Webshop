@@ -36,7 +36,24 @@
 
         <?php echo $this->getChildHtml('currency_switcher') ?>
 
-        <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getChildHtml('accountLinks') ?></p>
+        <div class='container-fluid' id='info-header'>
+            <div class='container'>
+                <div class='row hidden-xs'>
+                    <div class='col col-sm-12'>
+                        <div class='pull-left alpha'>
+                            <img class='picTelephoneNumber' src='http://127.0.0.1/magento/skin/frontend/webshop/default/images/glyphicons-earphone.png'>
+                            <a class='telephoneNumber'><?php echo $this->__('076 433 23 45') ?></a>
+                        </div>
+                        <a class='pull-right'>
+                            <img class='picSwissFlag' src='http://127.0.0.1/magento/skin/frontend/webshop/default/images/swissFlag.jpg'>
+                            <span><p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getChildHtml('accountLinks') ?></p></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<p class="welcome-msg">--><?php /*echo $this->getChildHtml('welcome')*/ ?> <?php /*echo $this->getChildHtml('accountLinks')*/ ?><!--</p>-->
     </div>
 </div>
 
@@ -46,6 +63,8 @@
             <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
             <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
         </a>
+
+        <?php include('header-text.phtml'); ?>
 
         <?php // In order for the language switcher to display next to logo on smaller viewports, it will be moved here.
               // See app.js for details ?>

@@ -3181,6 +3181,42 @@ body {
 /* ============================================ *
  * Language switcher + welcome message
  * ============================================ */
+.logo {
+  margin-top: -30px;
+}
+
+#info-header a, #info-header a:hover, #info-header a:visited {
+  color: white;
+}
+
+#info-header .alpha {
+  padding-left: 280px;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.picTelephoneNumber {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 3px auto 3px;
+}
+
+.picSwissFlag {
+  width: 29px;
+  height: 19px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 3px auto 3px;
+}
+
 .header-language-background {
   padding: 10px;
   background-color: #3399cc;
