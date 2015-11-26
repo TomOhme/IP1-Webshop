@@ -94,6 +94,7 @@ $c-red: #CF5050;
 $c-yellow: #FFDD15;
 $c-black: #000000;
 $c-gray: #333333;
+$c-webshop: #FF0000;
 
 // =============================================
 // Base Colors
@@ -170,10 +171,10 @@ $c-h5: $c-text;
 $c-h6: $c-text;
 
 // Link
-$c-link: $c-action;
-$c-link-hover: darken($c-action, 5%);
-$c-link-focus: $c-action;
-$c-link-active: darken($c-action, (5% / 2));
+$c-link: $c-webshop;
+$c-link-hover: darken($c-webshop, 5%);
+$c-link-focus: $c-webshop;
+$c-link-active: darken($c-webshop, (5% / 2));
 
 // Module (generic)
 

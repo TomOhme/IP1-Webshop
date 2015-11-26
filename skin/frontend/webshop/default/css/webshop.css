@@ -1,14 +1,38 @@
 a
 {
-    color: red;
+    color: #2e8ab8;
+}
+a:hover{
+    color: #2e8ab8;
+}
+
+a:focus {
+    outline-color: #3091c2;
+    color: #143d52;
+}
+
+/*color settings footer */
+
+.footer .links a {
+    color: #636363;
+}
+.footer .links a:hover {
+color: #3399cc;}
+
+.footer .block-title,
+.footer address {
+    color: #3399cc;}
+
+
+.header-text{
+    height: 110px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .logo {
     margin-top: -30px;
-}
-
-#page-header-logo {
-    padding-bottom: 60px;
 }
 
 #info-header a, #info-header a:hover, #info-header a:visited {
