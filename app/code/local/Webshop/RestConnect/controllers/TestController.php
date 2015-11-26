@@ -19,7 +19,7 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
             'requestTokenUrl' => 'http://127.0.0.1/magento/oauth/initiate',
             'accessTokenUrl' => 'http://127.0.0.1/magento/oauth/token',
             'authorizeUrl' => 'http://127.0.0.1/magento/admin/oAuth_authorize', //This URL is used only if we authenticate as Admin user type
-            'consumerKey' => '9a7fe824b69dc81faea1a0668c1f0dec', //Consumer key registered in server administration
+            'consumerKey' => '72cc900a4dbda91420b1cd34a7b76c27', //Consumer key registered in server administration
             'consumerSecret' => 'eda306642929637bdb9ff5169f573dbb', //Consumer secret registered in server administration
             'callbackUrl' => 'http://127.0.0.1/magento/restconnect/test/callback', //Url of callback action below
         );
