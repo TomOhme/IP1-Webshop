@@ -78,6 +78,7 @@
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
 
                 <action method="addItem"><type>skin_css</type><name>css/webshop.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
+                <action method="addItem"><type>skin_css</type><name>css/bootstrap.min.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
 
                 <!-- Sets viewport meta tag using text block -->
                 <block type="core/text" name="head.viewport">
@@ -181,6 +182,7 @@
                 <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
 
                 <action method="addCss"><stylesheet>css/webshop.css</stylesheet></action>
+                <action method="addCss"><stylesheet>css/bootstrap.min.css</stylesheet></action>
 
                 <action method="addItem"><type>js</type><name>lib/ds-sleight.js</name><params/><if>lt IE 7</if></action>
                 <!--<action method="addItem"><type>skin_js</type><name>js/iehover-fix.js</name><params/><if>lt IE 7</if></action>-->

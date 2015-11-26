@@ -106,23 +106,7 @@
             <?php echo $this->getChildHtml('topMenu') ?>
         </div>
 
-        <!-- dynamic navi -->
-        <table style="width:100%">
-        <?php $collection = Mage::getModel('cms/page')->getCollection()->addStoreFilter(Mage::app()->getStore()->getId());?>
-        <?php  $collection->getSelect()->where('is_active = 1'); ?>
-   <!--     <ul id="nav"> -->
-            <tr>
-            <?php foreach ($collection as $page): ?>
-                <?php $PageData = $page->getData(); ?>
-                <?php if($PageData['identifier']!='no-route' && $PageData['identifier']!='enable-cookies' && $PageData['identifier']!='home2' && $PageData['identifier'] != 'customer-service'){ ?>
-                    <td style="text-align: center">
-                        <a href="/magento/index.php/<?php echo $PageData['identifier']?>"><span><?php echo $PageData['title'] ?></span></a>
-                    </td>
-                <?php } ?>
-            <?php endforeach; ?>
-            </tr>
-     <!--   </ul> -->
-        </table>
+        <?php include('navi.phtml'); ?>
 
         <!-- Search -->
 

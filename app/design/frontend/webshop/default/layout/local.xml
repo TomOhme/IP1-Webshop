@@ -27,6 +27,10 @@
             <block type="core/template" name="wc-customheadblock" template="wc-customheadblock.phtml" />
         </reference>
 
+        <reference name="left">
+            <remove name="catalog.leftnav"/>
+        </reference>
+
         <reference name="right">
             <remove name="catalog.compare.sidebar"/>
         </reference>
