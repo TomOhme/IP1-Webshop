@@ -234,7 +234,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
 
             if (!$this->_getSession()->getNoCartRedirect(true)) {
                 if (!$cart->getQuote()->getHasError()) {
-                    $message = $this->__('%s was added to your shopping cart.', Mage::helper('core')->escapeHtml($product->getName()));
+                    $message = $this->__('%s wurde dem Warenkorb hinzugefügt.', Mage::helper('core')->escapeHtml($product->getName()));
                     $this->_getSession()->addSuccess($message);
                 }
                 $this->_goBack();
@@ -256,7 +256,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
                 $this->_redirectReferer(Mage::helper('checkout/cart')->getCartUrl());
             }
         } catch (Exception $e) {
-            $this->_getSession()->addException($e, $this->__('Cannot add the item to shopping cart.'));
+            $this->_getSession()->addException($e, $this->__('Produkt kann nicht dem Warenkorb hinzugefügt werden.'));
             Mage::logException($e);
             $this->_goBack();
         }
@@ -290,7 +290,7 @@ class Webshop_Checkout_CartController extends Mage_Checkout_CartController
                     $this->_getSession()->addError($e->getMessage());
                 }
             } catch (Exception $e) {
-                $this->_getSession()->addException($e, $this->__('Cannot add the item to shopping cart.'));
+                $this->_getSession()->addException($e, $this->__('Produkt kann nicht dem Warenkorb hinzugefügt werden.'));
                 Mage::logException($e);
                 $this->_goBack();
             }
