@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Webshop_Catalog>
+        <Webshop_Checkout>
             <version>1.0</version>
-        </Webshop_Catalog>
+        </Webshop_Checkout>
     </modules>
 
     <frontend>
         <routers>
-            <catalog>
+            <checkout>
                 <args>
                     <modules>
-                        <webshop_catalog before="Mage_Catalog">Webshop_Catalog</webshop_catalog>
+                        <webshop_checkout before="Mage_Checkout">Webshop_Checkout</webshop_checkout>
                     </modules>
                 </args>
-            </catalog>
+            </checkout>
         </routers>
     </frontend>
 </config>

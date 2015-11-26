@@ -214,9 +214,11 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
 
         <ul class="cart-links">
             <?php if ($isVisibleProduct): ?>
+                <!-- Removed edit button
                 <li>
-                    <a href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Edit item parameters')) ?>"><?php echo $this->__('Edit') ?></a>
+                    <a href="<?php //echo $this->getConfigureUrl() ?>" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Edit item parameters')) ?>"><?php //echo $this->__('Edit') ?></a>
                 </li>
+                -->
             <?php endif ?>
 
             <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
