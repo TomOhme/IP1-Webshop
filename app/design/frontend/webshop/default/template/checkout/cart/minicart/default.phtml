@@ -41,7 +41,7 @@
         <table class="info-wrapper">
             <tbody>
                 <tr>
-                    <th><?php echo $this->__('Price'); ?></th>
+                    <th><?php echo $this->__('Preis'); ?></th>
                     <td>
                         <?php if ($canApplyMsrp): ?>
 
@@ -124,7 +124,7 @@
                     </td>
                 </tr>
                 <tr class="qty-wrapper">
-                    <th><?php echo $this->__('Qty'); ?></th>
+                    <th><?php echo $this->__('Anzahl'); ?></th>
                     <td>
                         <input
                             id="qinput-<?php echo $_item->getId(); ?>"
@@ -156,12 +156,12 @@
             |-->
             <?php if (!$this->isOnCheckoutPage()): ?>
                 <a href="<?php echo $this->getAjaxDeleteUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Remove This Item')) ?>"
-                   data-confirm="<?php echo $this->__('Are you sure you would like to remove this item from the shopping cart?') ?>"
+                   data-confirm="<?php echo $this->__('Sind sie sicher, dass sie diesen Artikel entfernen wollen?') ?>"
                    class="remove">
-                    <?php echo $this->__('Remove Item') ?>
+                    <?php echo $this->__('Artikel entfernen') ?>
                 </a>
             <?php else: ?>
-                <span><?php echo $this->__('Remove Item') ?></span>
+                <span><?php echo $this->__('Artikel entfernen') ?></span>
             <?php endif; ?>
         <?php endif ?>
 

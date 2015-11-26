@@ -41,12 +41,14 @@
                 <ul>
                     <li class="fields"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress())->setFieldIdFormat('shipping:%s')->setFieldNameFormat('shipping[%s]')->setFieldParams('onchange="shipping.setSameAsBilling(false)"')->toHtml() ?></li>
                     <li class="fields">
+                        <!--- remove company option
                         <div class="fields">
-                            <label for="shipping:company"><?php echo $this->__('Company') ?></label>
+                            <label for="shipping:company"><?php //echo $this->__('Company') ?></label>
                             <div class="input-box">
-                                <input type="text" id="shipping:company" name="shipping[company]" value="<?php echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Company')) ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" onchange="shipping.setSameAsBilling(false);" />
+                                <input type="text" id="shipping:company" name="shipping[company]" value="<?php //echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Company')) ?>" class="input-text <?php //echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" onchange="shipping.setSameAsBilling(false);" />
                             </div>
                         </div>
+                        --->
                     </li>
             <?php $_streetValidationClass = $this->helper('customer/address')->getAttributeValidationClass('street'); ?>
                     <li class="wide">
@@ -104,7 +106,10 @@
                         <div class="field">
                             <label for="shipping:country_id" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                             <div class="input-box">
-                                <?php echo $this->getCountryHtmlSelect('shipping') ?>
+                                <!--- remove standard country checkbox -->
+                                <?php //echo $this->getCountryHtmlSelect('shipping') ?>
+                                <!--- own country selection to Switzerland --->
+                                <select name="shipping[country_id]" id="shipping:country_id" class="validate-select" title="Country" onchange="shipping.setSameAsBilling(false);"><option value="CH" selected="selected" >Schweiz</option></select>
                             </div>
                         </div>
                     </li>
@@ -115,12 +120,14 @@
                                 <input type="tel" name="shipping[telephone]" value="<?php echo $this->escapeHtml($this->getAddress()->getTelephone()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Telephone')) ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('telephone') ?>" id="shipping:telephone" onchange="shipping.setSameAsBilling(false);" />
                             </div>
                         </div>
+                        <!--- remove fax option
                         <div class="field">
-                            <label for="shipping:fax"><?php echo $this->__('Fax') ?></label>
+                            <label for="shipping:fax"><?php //echo $this->__('Fax') ?></label>
                             <div class="input-box">
-                                <input type="tel" name="shipping[fax]" value="<?php echo $this->escapeHtml($this->getAddress()->getFax()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Fax')) ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('fax') ?>" id="shipping:fax" onchange="shipping.setSameAsBilling(false);" />
+                                <input type="tel" name="shipping[fax]" value="<?php //echo $this->escapeHtml($this->getAddress()->getFax()) ?>" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Fax')) ?>" class="input-text <?php //echo $this->helper('customer/address')->getAttributeValidationClass('fax') ?>" id="shipping:fax" onchange="shipping.setSameAsBilling(false);" />
                             </div>
                         </div>
+                        --->
                     </li>
                 <?php if ($this->isCustomerLoggedIn() && $this->customerHasAddresses()):?>
                     <li class="control">

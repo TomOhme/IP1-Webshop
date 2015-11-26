@@ -48,12 +48,14 @@
             <li class="fields">
                 <?php echo $this->getNameBlockHtml() ?>
             </li>
+            <!---
             <li class="wide">
-                <label for="company"><?php echo $this->__('Company') ?></label>
+                <label for="company"><?php //echo $this->__('Company') ?></label>
                 <div class="input-box">
-                    <input type="text" name="company" id="company" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Company')) ?>" value="<?php echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" />
+                    <input type="text" name="company" id="company" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Company')) ?>" value="<?php //echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" class="input-text <?php //echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" />
                 </div>
             </li>
+            --->
             <li class="fields">
                 <div class="field">
                     <label for="telephone" class="required"><em>*</em><?php echo $this->__('Telephone') ?></label>
@@ -61,12 +63,14 @@
                         <input type="tel" name="telephone" value="<?php echo $this->escapeHtml($this->getAddress()->getTelephone()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Telephone')) ?>" class="input-text  <?php echo $this->helper('customer/address')->getAttributeValidationClass('telephone') ?>" id="telephone" />
                     </div>
                 </div>
+                <!---
                 <div class="field">
-                    <label for="fax"><?php echo $this->__('Fax') ?></label>
+                    <label for="fax"><?php //echo $this->__('Fax') ?></label>
                     <div class="input-box">
-                        <input type="tel" name="fax" id="fax" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Fax')) ?>" value="<?php echo $this->escapeHtml($this->getAddress()->getFax()) ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('fax') ?>" />
+                        <input type="tel" name="fax" id="fax" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Fax')) ?>" value="<?php //echo $this->escapeHtml($this->getAddress()->getFax()) ?>" class="input-text <?php //echo $this->helper('customer/address')->getAttributeValidationClass('fax') ?>" />
                     </div>
                 </div>
+                --->
             </li>
         </ul>
     </div>
@@ -129,7 +133,10 @@
                 <div class="field">
                     <label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                     <div class="input-box">
-                        <?php echo $this->getCountryHtmlSelect() ?>
+                        <!--- remove standard country checkbox -->
+                        <?php //echo $this->getCountryHtmlSelect() ?>
+                        <!--- own country selection to Switzerland --->
+                        <select name="country_id" id="country" title="<?php echo $this->__('Country') ?>" class="validate-select"><option value="CH" selected="selected">Schweiz</option></select>
                     </div>
                 </div>
             </li>
