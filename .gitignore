@@ -24,6 +24,7 @@ RELEASE_NOTES.txt
 /index.php
 /install.php
 
+/app/code/local/Webshop/RestConnect/controllers/TestController.php
 
 app/etc/applied.patches.list
 app/etc/config.xml

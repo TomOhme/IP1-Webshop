@@ -34,18 +34,11 @@
 <?php $_menu = $this->getHtml('level-top') ?>
 
 <?php if($_menu): ?>
-
-    <?php $collection = Mage::getModel('cms/page')->getCollection()->addStoreFilter(Mage::app()->getStore()->getId());?>
-    <?php  $collection->getSelect()->where('is_active = 1'); ?>
-    <nav id="nav">
-        <?php foreach ($collection as $page): ?>
-            <?php $PageData = $page->getData(); ?>
-            <?php if($PageData['identifier']!='no-route' && $PageData['identifier']!='enable-cookies' && $PageData['identifier']!='home2' && $PageData['identifier'] != 'customer-service'){ ?>
-                    <a href="/magento/index.php/<?php echo $PageData['identifier']?>"><span><?php echo $PageData['title'] ?></span></a>
-            <?php } ?>
-        <?php endforeach; ?>
-   <!--     <ol class="nav-primary"> -->
-            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('navilist')->toHtml(); ?>
-     <!--   </ol> -->
-    </nav>
+    <div class="top-navi">
+        <nav id="nav">
+       <!--     <ol class="nav-primary"> -->
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('navilist')->toHtml(); ?>
+         <!--   </ol> -->
+        </nav>
+    </div>
 <?php endif ?>

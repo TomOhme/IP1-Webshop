@@ -23,7 +23,6 @@ color: #3399cc;}
 .footer address {
     color: #3399cc;}
 
-
 .header-text{
     height: 110px;
     text-align: center;
@@ -32,17 +31,20 @@ color: #3399cc;}
 }
 
 .nav-cell{
-    text-align:center; background-color: white;
+    text-align:center;
+    background-color: white;
     padding: 10px;
-
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-top: 1px solid #EDEDED;
     }
 
 .nav-cell:hover{
-    background-color: #f2f2f2;
+    background-color: #EDEDED;
 }
 
 .nav-cell:focus{
-    background-color:#f2f2f2;
+    background-color:#EDEDED;
 }
 
 .nav-cell a {
@@ -50,7 +52,12 @@ color: #3399cc;}
 }
 
 .nav-cell:active{
-    background-color: #f2f2f2;
+    background-color: #EDEDED;
+}
+
+.top-navi
+{
+    margin-left: 5px;
 }
 
 .logo {

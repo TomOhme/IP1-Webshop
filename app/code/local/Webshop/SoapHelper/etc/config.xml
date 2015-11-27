@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Webshop_Soap>
+            <version>0.1.0</version>
+        </Webshop_Soap>
+    </modules>
+    <frontend>
+        <routers>
+            <soaphelper>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_SoapHelper</module>
+                    <frontName>soaphelper</frontName>
+                </args>
+            </soaphelper>
+        </routers>
+    </frontend>
+    <global>
+        <helpers>
+            <soaphelper>
+                <class>Webshop_SoapHelper_Helper</class>
+            </soaphelper>
+        </helpers>
+    </global>
+</config>

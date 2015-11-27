@@ -50,6 +50,9 @@
                 <action method="addJs"><script>mage/translate.js</script></action>
                 <action method="addJs"><script>mage/cookies.js</script></action>
 
+                <action method="addJs"><script>webshop/webshop.js</script></action>
+                <action method="addJs"><script>http://code.jquery.com/jquery-2.1.4.min.js</script></action>
+
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
                 <!-- Remove items which the RWD package is not dependent upon -->
@@ -174,6 +177,9 @@
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
                 <action method="addJs"><script>varien/js.js</script></action>
+
+                <action method="addJs"><script>webshop/webshop.js</script></action>
+                <action method="addJs"><script>http://code.jquery.com/jquery-2.1.4.min.js</script></action>
 
                 <action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
