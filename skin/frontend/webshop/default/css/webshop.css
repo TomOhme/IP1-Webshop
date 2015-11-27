@@ -23,12 +23,33 @@ color: #3399cc;}
 .footer address {
     color: #3399cc;}
 
-
 .header-text{
     height: 110px;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+}
+
+.nav-cell{
+    text-align:center; background-color: white;
+    padding: 10px;
+
+    }
+
+.nav-cell:hover{
+    background-color: #f2f2f2;
+}
+
+.nav-cell:focus{
+    background-color:#f2f2f2;
+}
+
+.nav-cell a {
+    display:block; width:100%;
+}
+
+.nav-cell:active{
+    background-color: #f2f2f2;
 }
 
 .logo {

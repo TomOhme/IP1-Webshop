@@ -16,7 +16,7 @@
         <?php foreach ($collection as $page): ?>
             <?php $PageData = $page->getData(); ?>
             <?php if($PageData['identifier']!='no-route' && $PageData['identifier']!='enable-cookies' && $PageData['identifier']!='home2' && $PageData['identifier'] != 'customer-service'){ ?>
-                <td style="text-align: center">
+                <td class="nav-cell">
                     <a href="/magento/index.php/<?php echo $PageData['identifier']?>"><span><?php echo $PageData['title'] ?></span></a>
                 </td>
             <?php } ?>
