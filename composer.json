@@ -1,5 +1,14 @@
 {
-    "require-dev": {
-        "phpunit/phpunit": "5.0.*"
+    "name": "riconeitzel/german-localepack-de-de",
+    "type": "magento-module",
+    "license":"OSL-3.0",
+    "description":"German Community Translation",
+    "authors":[
+        {
+            "name":"Rico Neitzel"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
     }
 }

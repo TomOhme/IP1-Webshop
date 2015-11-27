@@ -18,8 +18,8 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
             'siteUrl' => 'http://127.0.0.1/magento/oauth',
             'requestTokenUrl' => 'http://127.0.0.1/magento/oauth/initiate',
             'accessTokenUrl' => 'http://127.0.0.1/magento/oauth/token',
-            'authorizeUrl' => 'http://127.0.0.1/magento/admin/oAuth_authorize', //This URL is used only if we authenticate as Admin user type
-            'consumerKey' => '72cc900a4dbda91420b1cd34a7b76c27', //Consumer key registered in server administration
+            'authorizeUrl' => 'http://127.0.0.1/magento/admin/oauth_authorize', //This URL is used only if we authenticate as Admin user type
+            'consumerKey' => '9a7fe824b69dc81faea1a0668c1f0dec', //Consumer key registered in server administration
             'consumerSecret' => 'eda306642929637bdb9ff5169f573dbb', //Consumer secret registered in server administration
             'callbackUrl' => 'http://127.0.0.1/magento/restconnect/test/callback', //Url of callback action below
         );
@@ -65,12 +65,13 @@ class Webshop_RestConnect_TestController extends Mage_Core_Controller_Front_Acti
     public function newAction(){
         $callbackUrl = "http://127.0.0.1/magento/restconnect/test/new";
         $temporaryCredentialsRequestUrl = "http://127.0.0.1/magento/oauth/initiate?oauth_callback=" . urlencode($callbackUrl);
-        $adminAuthorizationUrl = 'http://127.0.0.1/magento/admin/oAuth_authorize';
+        $adminAuthorizationUrl = 'http://127.0.0.1/magento/admin/oauth_authorize';
         $accessTokenRequestUrl = 'http://127.0.0.1/magento/oauth/token';
         $apiUrl = 'http://127.0.0.1/magento/api/rest';
         $consumerKey = '9a7fe824b69dc81faea1a0668c1f0dec';
         $consumerSecret = 'eda306642929637bdb9ff5169f573dbb';
 
+        $_SESSION['state'] = 0;
         if (!isset($_GET['oauth_token']) && isset($_SESSION['state']) && $_SESSION['state'] == 1) {
             $_SESSION['state'] = 0;
         }
