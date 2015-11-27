@@ -23,7 +23,6 @@
  * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-/** @var Mage_Checkout_Block_Onepage_Billing $this */
 ?>
 <form id="co-billing-form" action="">
 <fieldset>
@@ -44,9 +43,9 @@
                 <li class="fields">
                     <!--- remove company option
                     <div class="field">
-                        <label for="billing:company"><?php echo $this->__('Company') ?></label>
+                        <label for="billing:company"><?php //echo $this->__('Company') ?></label>
                         <div class="input-box">
-                            <input type="text" id="billing:company" name="billing[company]" value="<?php echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Company')) ?>" class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" />
+                            <input type="text" id="billing:company" name="billing[company]" value="<?php //echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php //echo Mage::helper('core')->quoteEscape($this->__('Company')) ?>" class="input-text <?php //echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" />
                         </div>
                     </div>
                     --->
@@ -114,10 +113,7 @@
                     <div class="field">
                         <label for="billing:country_id" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                         <div class="input-box">
-                            <!--- remove standard country checkbox -->
-                            <?php //echo $this->getCountryHtmlSelect('billing') ?>
-                            <!--- own country selection to Switzerland --->
-                            <select name="billing[country_id]" id="billing:country_id" class="validate-select" title="Country"> <option value="CH" selected="selected">Schweiz</option></select>
+                            <?php echo $this->getCountryHtmlSelect('billing') ?>
                         </div>
                     </div>
                 </li>
@@ -156,9 +152,12 @@
                 </li>
             <?php endif ?>
 
-            <?php if ($this->isTaxvatEnabled()):?>
-                <li><?php echo $this->getTaxvatHtml() ?></li>
-            <?php endif; ?>
+        <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
+        <?php if ($_taxvat->isEnabled()): ?>
+                <li>
+                    <?php echo $_taxvat->setTaxvat($this->getQuote()->getCustomerTaxvat())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?>
+                </li>
+        <?php endif ?>
 
                 <li class="fields" id="register-customer-password">
                     <div class="field">
@@ -174,7 +173,6 @@
                         </div>
                     </div>
                 </li>
-                <?php echo $this->getChildHtml('persistent.remember.me'); ?>
                 <?php endif; ?>
                 <?php if ($this->isCustomerLoggedIn() && $this->customerHasAddresses()):?>
                     <li class="control">
@@ -185,12 +183,13 @@
                 <?php endif; ?>
                 <?php echo $this->getChildHtml('form.additional.info'); ?>
             </ul>
-            <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
         </fieldset>
-     </li>
+    </li>
+    <?php /* Extensions placeholder */ ?>
+    <?php echo $this->getChildHtml('checkout.onepage.billing.extra')?>
     <?php if ($this->canShip()): ?>
         <li class="control">
-            <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_yes" value="1"<?php if ($this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo  Mage::helper('core')->quoteEscape($this->__('Ship to this address')) ?>" onclick="$('shipping:same_as_billing').checked = true;" class="radio" /><label for="billing:use_for_shipping_yes"><?php echo  $this->__('Ship to this address') ?></label></li>
+            <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_yes" value="1"<?php if ($this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo Mage::helper('core')->quoteEscape($this->__('Ship to this address')) ?>" onclick="$('shipping:same_as_billing').checked = true;" class="radio" /><label for="billing:use_for_shipping_yes"><?php echo  $this->__('Ship to this address') ?></label></li>
         <li class="control">
             <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_no" value="0"<?php if (!$this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo Mage::helper('core')->quoteEscape($this->__('Ship to different address')) ?>" onclick="$('shipping:same_as_billing').checked = false;" class="radio" /><label for="billing:use_for_shipping_no"><?php echo $this->__('Ship to different address') ?></label>
         </li>
@@ -213,21 +212,9 @@
     var billing = new Billing('co-billing-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveBilling') ?>');
     var billingForm = new VarienForm('co-billing-form');
 
-    //billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('Select State/Province...')) ?>');
+    //billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
     $('billing-address-select') && billing.newAddress(!$('billing-address-select').value);
 
     var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'billing:postcode');
-    if ($('onepage-guest-register-button')) {
-        Event.observe($('onepage-guest-register-button'), 'click', function(event) {
-            var billingRememberMe = $('co-billing-form').select('#remember-me-box');
-            if (billingRememberMe.length > 0) {
-                if ($('login:guest') && $('login:guest').checked) {
-                    billingRememberMe[0].hide();
-                } else if ($('login:register') && ($('login:register').checked || $('login:register').type == 'hidden')) {
-                    billingRememberMe[0].show();
-                }
-            }
-        });
-    }
 //]]>
 </script>
