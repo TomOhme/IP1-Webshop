@@ -71,15 +71,21 @@
                   // See app.js for details ?>
             <!--<div class="store-language-container"></div>-->
 
+
+             <?php include('navi.phtml'); ?>
+
             <!-- Skip Links -->
 
 
 
             <div class="skip-links">
+
+                <!--
                 <a href="#header-nav" class="skip-link skip-nav">
                     <span class="icon"></span>
-                    <span class="label"><?php echo $this->__('Men&uuml;'); ?></span>
+                    <span class="label"><?php // echo $this->__('Men&uuml;'); ?></span>
                 </a>
+                -->
 
                 <a href="#header-search" class="skip-link skip-search">
                     <span class="icon"></span>
@@ -102,11 +108,11 @@
          </div>
 
         <!-- Navigation -->
+        <!--
         <div id="header-nav" class="skip-content">
-            <?php echo $this->getChildHtml('topMenu') ?>
+            <?php// echo $this->getChildHtml('topMenu') ?>
         </div>
-
-        <?php include('navi.phtml'); ?>
+        -->
 
         <!-- Search -->
 
@@ -119,6 +125,8 @@
         <div id="header-account" class="skip-content">
             <?php echo $this->getChildHtml('topLinks') ?>
         </div>
+
+
     </div>
 </header>
 

@@ -32,7 +32,8 @@ color: #3399cc;}
 }
 
 .nav-cell{
-    text-align:center; background-color: white;
+    text-align:center;
+    background-color: white;
     padding: 10px;
 
     }
@@ -51,6 +52,11 @@ color: #3399cc;}
 
 .nav-cell:active{
     background-color: #f2f2f2;
+}
+
+.top-navi
+{
+    margin-left: 5px;
 }
 
 .logo {
