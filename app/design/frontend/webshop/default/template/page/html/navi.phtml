@@ -24,3 +24,21 @@
     </tr>
     <!--   </ul> -->
 </table>
+
+<!-- Holt alle Kategorien -->
+<?php
+/*
+$_helper = Mage::helper('catalog/category');
+$_categories = $_helper->getStoreCategories();
+foreach($_categories as $_category){
+    $_category = Mage::getModel('catalog/category')->load($_category->getId());
+    $_subcategories = $_category->getChildrenCategories();
+    echo $_category->getName();
+  //  echo $_category->getId();
+    foreach($_subcategories as $_subcategory){
+        echo $_subcategory->getName();
+ //       echo $_subcategory->getId();
+    }
+}
+*/
+?>
