@@ -35,4 +35,7 @@
             <remove name="catalog.compare.sidebar"/>
         </reference>
     </default>
+
+
+
 </layout>

@@ -38,6 +38,10 @@
         <update handle="cms_menu"/>
         <reference name="content">
             <block type="core/template" name="contactForm" template="contacts/form.phtml"/>
+
+            <block type="cms/block" name="GoogleMaps">
+                <action method="setBlockId"><block_id>googlemaps</block_id></action>
+            </block>
         </reference>
     </contacts_index_index>
 </layout>
