@@ -17,7 +17,7 @@
             <?php $PageData = $page->getData(); ?>
             <?php if($PageData['identifier']!='no-route' && $PageData['identifier']!='enable-cookies' && $PageData['identifier']!='home2' && $PageData['identifier'] != 'customer-service'){ ?>
                 <td class="nav-cell">
-                    <a href="<?php echo $PageData['identifier']?>"><span><?php echo $PageData['title'] ?></span></a>
+                    <a href="<?php echo Mage::getBaseUrl(); echo $PageData['identifier'];?>"><span><?php echo $PageData['title'] ?></span></a>
                 </td>
             <?php } ?>
         <?php endforeach; ?>
