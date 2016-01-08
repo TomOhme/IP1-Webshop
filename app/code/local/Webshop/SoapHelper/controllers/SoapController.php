@@ -19,11 +19,20 @@ class Webshop_SoapHelper_SoapController extends Mage_Core_Controller_Front_Actio
     }
 
     public function createproductAction(){
-        $soap = MAGE::helper("workshop/soaphelper");
+        $soap = Mage::helper("soaphelper");
         $soap->initSoap();
         $productEntity = $soap->createCatalogProductEntity((array("Gemüse")), array("1"), "Tomate", "Ich bin eine Tomate", "Ich Tomate", "5", "1", "tomate"
-    , "1", "10", "", "", "", "TOMATE", "tomate", "Ich bin eine Tomate");
-        echo $soap->createProduct("10",$productEntity);
-        $soap->closeSoap;
+    , "4", "10", "", "", "", "TOMATE", "tomate", "Ich bin eine Tomate", "5");
+        echo $soap->createProduct("11",$productEntity);
+        $soap->closeSoap();
+    }
+
+    public function updateproductAction(){
+        $soap = Mage::helper("soaphelper");
+        $soap->initSoap();
+        $productEntity = $soap->createCatalogProductEntity((array("Fleisch")), array("1"), "Tomate", "Ich bin eine Tomate", "Ich bin eine UNIT", "5", "1", "tomate"
+            , "4", "100", "", "", "", "TOMATE", "tomate", "Ich bin eine Tomate", "50");
+        echo $soap->updateProductByID("2",$productEntity);
+        $soap->closeSoap();
     }
 }

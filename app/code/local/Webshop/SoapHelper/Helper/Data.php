@@ -54,7 +54,15 @@ class Webshop_SoapHelper_Helper_Data extends Mage_Core_Helper_Abstract{
     public function createProduct($sku, $productData){
         $attributeSets = $this -> client->call($this -> session, 'product_attribute_set.list');
         $attributeSet = current($attributeSets);
-        return $result = $this -> client->call($this -> session, 'catalog_product.create', array('simple', $attributeSet['set_id'], $sku, $productData));
+        return $this -> client->call($this -> session, 'catalog_product.create', array('simple', $attributeSet['set_id'], $sku, $productData));
+    }
+
+    public function updateProductByID($ID, $productData){
+        return $this -> client->call($this -> session, 'catalog_product.update', array($ID,$productData));
+    }
+
+    public function updateProductBySKU($SKU, $productData){
+        return $this -> client->call($this -> session, 'catalog_product.update', array($SKU,$productData));
     }
 
     /**
@@ -76,12 +84,14 @@ class Webshop_SoapHelper_Helper_Data extends Mage_Core_Helper_Abstract{
      * @param $meta_title
      * @param $meta_keyword
      * @param $meta_description
+     * @param $stock
      * @return array with all product values
      */
     public function createCatalogProductEntity($categories, $websites, $prodName, $description, $shortDescription, $weight, $status, $url_key
-    , $visibility, $price, $special_price, $special_from_date, $special_to_date, $meta_title, $meta_keyword, $meta_description){
+    , $visibility, $price, $special_price, $special_from_date, $special_to_date, $meta_title, $meta_keyword, $meta_description, $stock){
         return array(
             'categories' => $categories,
+            'unit' => 'Stueck',
             'websites' => $websites,
             'name' => $prodName,
             'description' => $description,
@@ -97,7 +107,11 @@ class Webshop_SoapHelper_Helper_Data extends Mage_Core_Helper_Abstract{
             'tax_class_id' => 1,
             'meta_title' => $meta_title,
             'meta_keyword' => $meta_keyword,
-            'meta_description' => $meta_description
+            'meta_description' => $meta_description,
+            array(
+                'qty' => $stock,
+                'is_in_stock' => "1"
+            )
         );
     }
 }
