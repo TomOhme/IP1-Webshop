@@ -135,6 +135,7 @@
                             value="<?php echo $this->getQty()?>"
                             <?php if ($this->isOnCheckoutPage()) echo 'disabled'; ?>
                             />
+                        <?php echo " ".$_item->getProduct()->getUnit()?>
 
                         <button id="qbutton-<?php echo $_item->getId(); ?>"
                                 data-item-id="<?php echo $_item->getId(); ?>"

@@ -5,6 +5,17 @@
             <version>1.0</version>
         </Webshop_Checkout>
     </modules>
+    <global>
+        <sales>
+            <quote>
+                <item>
+                    <product_attributes>
+                        <unit />
+                    </product_attributes>
+                </item>
+            </quote>
+        </sales>
+    </global>
 
     <frontend>
         <routers>
