@@ -41,11 +41,11 @@
                 <div class='row hidden-xs'>
                     <div class='col col-sm-12'>
                         <div class='pull-left alpha'>
-                            <img class='picTelephoneNumber' src="<?php echo Mage::getBaseUrl();?>skin/frontend/webshop/default/images/glyphicons-earphone.png">
+                            <img class='picTelephoneNumber' src="<?php echo str_replace("/default", '', Mage::getBaseUrl()); ?>skin/frontend/webshop/default/images/glyphicons-earphone.png">
                             <a class='telephoneNumber'><?php echo $this->__('000 000 00 00') ?></a>
                         </div>
                         <a class='pull-right'>
-                            <img class='picSwissFlag' src="<?php echo Mage::getBaseUrl();?>skin/frontend/webshop/default/images/swissFlag.jpg">
+                            <img class='picSwissFlag' src="<?php echo str_replace("/default", '', Mage::getBaseUrl()); ?>skin/frontend/webshop/default/images/swissFlag.jpg">
                             <span><p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getChildHtml('accountLinks') ?></p></span>
                         </a>
                     </div>
