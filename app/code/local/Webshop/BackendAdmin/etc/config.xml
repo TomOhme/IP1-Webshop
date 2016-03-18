@@ -7,13 +7,13 @@
     </modules>
     <frontend>
         <routers>
-            <backendAdmin>
+            <backendadmin>
                 <use>standard</use>
                 <args>
                     <module>Webshop_BackendAdmin</module>
-                    <frontName>backendAdmin</frontName>
+                    <frontName>backendadmin</frontName>
                 </args>
-            </backendAdmin>
+            </backendadmin>
         </routers>
     </frontend>
 </config>
