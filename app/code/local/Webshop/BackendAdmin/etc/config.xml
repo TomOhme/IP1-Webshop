@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webshop_BackendAdmin>
+            <version>0.1.0</version>    <!-- Version number of your module -->
+        </Webshop_BackendAdmin>
+    </modules>
+    <frontend>
+        <routers>
+            <backendAdmin>
+                <use>standard</use>
+                <args>
+                    <module>Webshop_BackendAdmin</module>
+                    <frontName>backendAdmin</frontName>
+                </args>
+            </backendAdmin>
+        </routers>
+    </frontend>
+</config>
