@@ -2,16 +2,10 @@
 require_once "Mage/Adminhtml/controllers/IndexController.php";
 class Webshop_BackendAdmin_IndexController extends Mage_Adminhtml_Controller_Action
 {
-    /**
-     * Render specified template
-     *
-     * @param string $tplName
-     * @param array $data parameters required by template
-     */
-    protected function _outTemplate($tplName, $data = array())
+    protected function _outTemplate($data = array())
     {
         $this->_initLayoutMessages('adminhtml/session');
-        $block = $this->getLayout()->createBlock('adminhtml/template')->setTemplate("$tplName.phtml");
+        $block = $this->getLayout()->createBlock('adminhtml/template')->setTemplate("backendLogin.phtml");
         foreach ($data as $index => $value) {
             $block->assign($index, $value);
         }
@@ -30,4 +24,16 @@ class Webshop_BackendAdmin_IndexController extends Mage_Adminhtml_Controller_Act
         }
         $this->_redirect("backendadmin");
     }
+
+    public function logoutAction()
+    {
+        /** @var $adminSession Mage_Admin_Model_Session */
+        $adminSession = Mage::getSingleton('admin/session');
+        $adminSession->unsetAll();
+        $adminSession->getCookie()->delete($adminSession->getSessionName());
+        $adminSession->addSuccess(Mage::helper('adminhtml')->__('You have logged out.'));
+
+        $this->_redirect('backendadmin');
+    }
+
 }
