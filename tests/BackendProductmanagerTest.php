@@ -5,7 +5,7 @@
  * Date: 20.03.16
  * Time: 16:52
  */
-class Webshop_SoapHelper_Helper_DataTest extends PHPUnit_Framework_TestCase{
+class Webshop_BackendProductmanager_Helper_DataTest extends PHPUnit_Framework_TestCase{
 
     private $soap;
 
@@ -13,8 +13,8 @@ class Webshop_SoapHelper_Helper_DataTest extends PHPUnit_Framework_TestCase{
      * @before
      */
     public function setupSOAPAPI(){
-        $this -> soap = Mage::helper("soaphelper");
-        $this -> soap->initSoap();
+        $this -> soap = Mage::helper("backendproductmanager");
+        $this -> soap->openSoap();
     }
 
     /**
