@@ -21,7 +21,7 @@ class Webshop_SoapHelper_SoapController extends Mage_Core_Controller_Front_Actio
     public function createproductAction(){
         $soap = Mage::helper("soaphelper");
         $soap->initSoap();
-        $productEntity = $soap->createCatalogProductEntity((array("Gemüse")), array("1"), "Tomate", "Ich bin eine Tomate", "Ich Tomate", "5", "1", "tomate"
+        $productEntity = $soap->createCatalogProductEntity((array("Gemüse")), "Stück", array("1"), "Tomate", "Ich bin eine Tomate", "Ich Tomate", "5", "1", "tomate"
     , "4", "10", "", "", "", "TOMATE", "tomate", "Ich bin eine Tomate", "5");
         echo $soap->createProduct("11",$productEntity);
         $soap->closeSoap();

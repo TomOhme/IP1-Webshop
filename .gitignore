@@ -141,7 +141,7 @@ skin/install/
 var/
 
 # Composer
-vendor
+vendor/
 coverage/
 composer.lock
 composer.phar

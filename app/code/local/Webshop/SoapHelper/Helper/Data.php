@@ -57,41 +57,51 @@ class Webshop_SoapHelper_Helper_Data extends Mage_Core_Helper_Abstract{
         return $this -> client->call($this -> session, 'catalog_product.create', array('simple', $attributeSet['set_id'], $sku, $productData));
     }
 
+    /**
+     * Updates specific product by it's IDxs
+     * @param $ID
+     * @param $productData
+     * @return boolean
+     */
     public function updateProductByID($ID, $productData){
         return $this -> client->call($this -> session, 'catalog_product.update', array($ID,$productData));
     }
 
-    public function updateProductBySKU($SKU, $productData){
-        return $this -> client->call($this -> session, 'catalog_product.update', array($SKU,$productData));
+    /**
+     * Delete product by it's ID
+     * @param $ID
+     * @return boolean
+     */
+    public function deleteProductByID($ID){
+        return $result = $this-> client -> call($this -> session, 'catalog_product.delete', $ID, 'ID');
     }
 
     /**
      * Setup product attributes
-     * @param $categories
-     * @param $websites
-     * @param $prodName
-     * @param $description
-     * @param $shortDescription
-     * @param $weight
-     * @param $status
-     * @param $url_key
-     * @param $url_key
-     * @param $visibility
-     * @param $price
-     * @param $special_price
-     * @param $special_from_date
-     * @param $special_to_date
-     * @param $meta_title
-     * @param $meta_keyword
-     * @param $meta_description
-     * @param $stock
+     * @param $categories       Array of Categories (String)
+     * @param $websites         Array of Website ID's (Int) visible Website ID (Default: array("1"))
+     * @param $prodName         String
+     * @param $description      String
+     * @param $shortDescription String
+     * @param $weight           String
+     * @param $status           String (Default: 1)
+     * @param $url_key          String (Default lower case product name)
+     * @param $visibility       String (Default 4)
+     * @param $price            String
+     * @param $special_price    String Optional
+     * @param $special_from_date String Optional
+     * @param $special_to_date  String Optional
+     * @param $meta_title       String
+     * @param $meta_keyword§    String
+     * @param $meta_description String
+     * @param $stock            String
      * @return array with all product values
      */
-    public function createCatalogProductEntity($categories, $websites, $prodName, $description, $shortDescription, $weight, $status, $url_key
+    public function createCatalogProductEntity($categories, $unit, $websites, $prodName, $description, $shortDescription, $weight, $status, $url_key
     , $visibility, $price, $special_price, $special_from_date, $special_to_date, $meta_title, $meta_keyword, $meta_description, $stock){
         return array(
             'categories' => $categories,
-            'unit' => 'Stueck',
+            'unit' => $unit,
             'websites' => $websites,
             'name' => $prodName,
             'description' => $description,
