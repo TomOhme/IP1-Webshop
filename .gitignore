@@ -145,6 +145,7 @@ vendor/
 coverage/
 composer.lock
 composer.phar
+composer.json
 
 .idea/
 magento.iml
