@@ -5,15 +5,26 @@
             <version>0.1.0</version>    <!-- Version number of your module -->
         </Webshop_BackendAdmin>
     </modules>
-    <frontend>
-        <routers>
+    <global>
+        <models />
+        <blocks />
+        <resources />
+        <extraconfig />
+        <helpers>
             <backendadmin>
-                <use>standard</use>
+                <class>Webshop_BackendAdmin_Helper</class>
+            </backendadmin>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <Webshop_BackendAdmin>
+                <use>admin</use>
                 <args>
                     <module>Webshop_BackendAdmin</module>
                     <frontName>backendadmin</frontName>
                 </args>
-            </backendadmin>
+            </Webshop_BackendAdmin>
         </routers>
-    </frontend>
+    </admin>
 </config>

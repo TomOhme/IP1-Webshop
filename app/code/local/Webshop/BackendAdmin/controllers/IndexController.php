@@ -1,12 +1,9 @@
 <?php
-class Webshop_BackendAdmin_IndexController extends Mage_Core_Controller_Front_Action
+class Webshop_BackendAdmin_IndexController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {
-        echo "Hello tuts+ World";
-    }
-    public function testAction()
-    {
-        echo "test action";
+        $this->loadLayout();
+        $this->renderLayout();
     }
 }
