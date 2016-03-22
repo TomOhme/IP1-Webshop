@@ -6,16 +6,26 @@
         </Webshop_BackendAdmin>
     </modules>
     <global>
-        <models />
-        <blocks />
-        <resources />
-        <extraconfig />
         <helpers>
             <backendadmin>
                 <class>Webshop_BackendAdmin_Helper</class>
             </backendadmin>
         </helpers>
     </global>
+    <stores>
+        <admin>
+            <design>
+                <package>
+                    <name>default</name>
+                </package>
+                <theme>
+                    <template>webshop</template>
+                    <skin>webshop</skin>
+                    <layout>webshop</layout>
+                </theme>
+            </design>
+        </admin>
+    </stores>
     <admin>
         <routers>
             <Webshop_BackendAdmin>
@@ -26,5 +36,10 @@
                 </args>
             </Webshop_BackendAdmin>
         </routers>
+        <design>
+            <theme>
+                <default>backendadmin</default>
+            </theme>
+        </design>
     </admin>
 </config>

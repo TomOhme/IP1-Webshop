@@ -1,11 +1,11 @@
 <?php
-require_once "Mage/Adminhtml/controllers/IndexController.php";
+
 class Webshop_BackendAdmin_IndexController extends Mage_Adminhtml_Controller_Action
 {
     protected function _outTemplate($data = array())
     {
         $this->_initLayoutMessages('adminhtml/session');
-        $block = $this->getLayout()->createBlock('adminhtml/template')->setTemplate("backendLogin.phtml");
+        $block = $this->getLayout()->createBlock('adminhtml/template')->setTemplate("backendadmin.phtml");
         foreach ($data as $index => $value) {
             $block->assign($index, $value);
         }
