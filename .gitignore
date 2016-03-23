@@ -36,7 +36,8 @@ app/.htaccess
 app/bootstrap.php
 app/Mage.php
 app/code/core/
-app/code/community/
+app/code/community/*
+!app/code/community/Ralab/*
 app/code/community/Phoenix/
 app/design/adminhtml/default/default
 app/design/adminhtml/default/mageworks
