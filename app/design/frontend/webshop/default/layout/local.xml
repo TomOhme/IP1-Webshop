@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <default>
+        <default>
+            <reference name="head">
+                <action method="addJs"><script>js/lib/jquery-2.2.2.min.js</script></action>
+                <action method="addItem"><type>skin_js</type><name>js/bootstrap.min.js</name></action>
+                <action method="removeItem"><type>skin_css</type><name>css/styles.css</name></action>
+                <action method="addItem"><type>skin_css</type><name>css/bootstrap.min.css</name></action>
+                <action method="addItem"><type>skin_css</type><name>css/styles.css</name></action>
+                <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name></action>
+            </reference>
+        </default>
         <reference name="header">
       <!--      <block type="cms/block" name="menu">
                 <action method="setBlockId"><block_id>menu</block_id></action>
