@@ -16,11 +16,24 @@
         <?php foreach ($collection as $page): ?>
             <?php $PageData = $page->getData(); ?>
             <?php if($PageData['identifier']!='no-route' && $PageData['identifier']!='enable-cookies' && $PageData['identifier']!='home2' && $PageData['identifier'] != 'customer-service'){ ?>
-                <td class="nav-cell">
+                <td class="nav-cell" width="200px">
                     <a href="<?php echo Mage::getBaseUrl(); echo $PageData['identifier'];?>"><span><?php echo $PageData['title'] ?></span></a>
                 </td>
             <?php } ?>
         <?php endforeach; ?>
+
+        <td class="nav-cell" width="200px">
+            <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
+               <!-- <span class="icon"></span> -->
+                <span class="label"><?php echo $this->__('Account'); ?></span>
+            </a>
+        </td>
+        <td class="nav-cell" width="200px">
+            <?php echo $this->getChildHtml('minicart_head'); ?>
+        </td>
+        <td class="nav-cell" width="200px">
+            <?php echo $this->getChildHtml('topSearch') ?>
+        </td>
     </tr>
     <!--   </ul> -->
 </table>
@@ -40,5 +53,19 @@ foreach($_categories as $_category){
  //       echo $_subcategory->getId();
     }
 }
+
+
+<div class="account-cart-wrapper">
+    <a href="<?php echo $this->helper('customer')->getAccountUrl(); ?>" data-target-element="#header-account" class="skip-link skip-account">
+        <span class="icon"></span>
+        <span class="label"><?php echo $this->__('Account'); ?></span>
+    </a>
+
+    <!-- Cart -->
+
+    <div class="header-minicart">
+        <?php echo $this->getChildHtml('minicart_head'); ?>
+    </div>
+</div>
 */
 ?>

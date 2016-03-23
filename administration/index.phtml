@@ -1,0 +1,38 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: Janis
+ * Date: 16.03.2016
+ * Time: 13:30
+ */
+
+<?php
+// Globale Variablen
+session_start();
+
+$page=isset($_GET['page'])? htmlentities(trim($_get['page'])) : 'home';
+$page=basename($page,'.php');
+$page=basename($page,'.html');
+$page_title=ucfirst($page);
+$page_title=str_replace('_', ' ', $page_title);
+?>
+
+<!DOCTYPE html>
+    <head>
+        <title>Adminbereich</title>
+    </head>
+    <body>
+        <div class="header">
+            <?php require_once("include/header.php"); ?>
+        </div>
+        <div class="navi">
+            <?php require_once("include/navi.php"); ?>
+        </div>
+        <div class="content">
+
+        </div>
+        <footer>
+
+        </footer>
+    </body>
+</html>
