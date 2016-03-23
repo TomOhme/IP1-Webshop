@@ -4,6 +4,7 @@
 .modman/
 .DS_Store
 
+#Magento
 cron.sh
 favicon.ico
 index.php.sample

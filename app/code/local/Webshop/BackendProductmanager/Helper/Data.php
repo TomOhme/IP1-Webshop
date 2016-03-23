@@ -3,7 +3,7 @@
  * Created by IntelliJ IDEA.
  * User: Yanick
  * Date: 21.03.16
- * Time: 10:18
+ * Time: 12:18
  */
 class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstract {
 
