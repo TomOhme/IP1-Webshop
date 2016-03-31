@@ -23,7 +23,7 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
 
     /**
      * Get all Products
-     * @return Array of catalogProductEntity
+     * @return array of catalogProductEntity
      * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProduct/catalog_product.list.html
      */
     public function getAllProducts()
@@ -35,12 +35,22 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
     /**
      * Get all information of a specific product by it's id
      * @param $ID
-     * @return Array with all product information
+     * @return array with all product information
      * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProduct/catalog_product.info.html
      */
     public function getProductByID($ID)
     {
         return $this->client->call($this->session, 'catalog_product.info', $ID);
+    }
+    /**
+     * Get all product images of a specific product by it's id
+     * @param $ProductID
+     * @return array of of catalogProductImageEntity
+     * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.list.html
+     */
+    public function getProductImage($ProductID)
+    {
+        return $this->client->call($this->session, 'catalog_product_attribute_media.list', $ProductID);
     }
 
     /**
@@ -57,6 +67,34 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
     }
 
     /**
+     * Creates a new product image an assignes it to the according product
+     * @param $filename
+     * @param $mime (this can be image/jpeg, image/jpg, image/png, image/gif)
+     * @param $name (display name in magento)
+     * @param $productId
+     * @return string stored image file name with path
+     * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.create.html
+     */
+    public function createProductImage($filename, $mime, $name, $productId)
+    {
+        $file = array(
+            'content' =>
+                base64_encode(file_get_contents(urldecode($filename))),
+            'mime' => $mime,
+            'name' => $name
+        );
+
+        return $this->client->call(
+            $this->session,
+            'catalog_product_attribute_media.create',
+            array(
+                $productId,
+                array('file'=>$file, 'label'=>$name, 'position'=>'1', 'types'=>array('image','small_image','thumbnail'), 'exclude'=>null)
+            )
+        );
+    }
+
+    /**
      * Updates specific product by it's IDxs
      * @param $ID
      * @param $productData
@@ -68,6 +106,36 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
     }
 
     /**
+     * Creates a new product image an assignes it to the according product
+     * @param $newFilename
+     * @param $mime (this can be image/jpeg, image/jpg, image/png, image/gif)
+     * @param $name (display name in magento)
+     * @param $oldFilename (Magento stored path and filename)
+     * @param $productId
+     * @return boolean
+     * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.update.html
+     */
+    public function updateProductImage($newFilename, $mime, $name, $oldFilename, $productId)
+    {
+        $file = array(
+            'content' =>
+                base64_encode(file_get_contents($newFilename)),
+            'mime' => $mime,
+            'name' => $name
+        );
+
+        return $this->client->call(
+            $this->session,
+            'catalog_product_attribute_media.update',
+            array(
+                $productId,
+                $oldFilename,
+                array('file'=>$file, 'label'=>$name, 'position'=>'1', 'types'=>array('image','small_image','thumbnail'), 'exclude'=>null)
+            )
+        );
+    }
+
+    /**
      * Delete product by it's ID
      * @param $ID
      * @return boolean
@@ -75,6 +143,18 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
     public function deleteProductByID($ID)
     {
         return $this->client->call($this->session, 'catalog_product.delete', $ID, 'ID');
+    }
+
+    /**
+     * Delete product image by it's magento filename (+path) and it's product id
+     * @param $productID
+     * @param $filename
+     * @return boolean / int
+     * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.remove.html
+     */
+    public function removeProductImage($productID, $filename)
+    {
+        return $this->client->call($this->session, 'catalog_product_attribute_media.remove', array('product' => $productID, 'file' => $filename));
     }
 
     /**

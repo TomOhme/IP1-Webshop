@@ -22,6 +22,7 @@ class Webshop_BackendProductmanager_Helper_DataTest extends PHPUnit_Framework_Te
      */
     public function testgetAllProducts(){
         $result = $this -> soap -> getAllProducts();
+        $this->assertGreaterThan(0,$result[0]['product_id']);
         $this->assertNotEmpty($result);
     }
 
@@ -29,11 +30,15 @@ class Webshop_BackendProductmanager_Helper_DataTest extends PHPUnit_Framework_Te
      * @test
      */
     public function testCRUDProduct(){
-        $productEntity = $this -> soap->createCatalogProductEntity((array("Gemüse")), "Stück", array("1"), "Tomate", "Ich bin eine Tomate", "Ich Tomate", "5", "1", "tomate"
-            , "4", "10", "", "", "", "TOMATE", "tomate", "Ich bin eine Tomate", "5");
-        $pid = $this -> soap->createProduct("11",$productEntity);
+        $file = urlencode("http://www.theredcow.com.au/wp-content/uploads/2012/10/Sbrinz_MG_7707_W1-72dpi_large.png");
+        $mime = 'image/png';
+        $productEntity = $this -> soap->createCatalogProductEntity((array("Obst")), "Stück", array("1"), "Sbrinz", "Ich bin ein Käse", "Ich Sbrinz", "5", "1", "tomate"
+            , "4", "10", "", "", "", "Sbrinz", "Sbrinz", "Sbrinz", "5");
+        $pid = $this -> soap->createProduct("101",$productEntity);
         $this->assertNotNull($pid);
         $this->assertNotContains($pid, [100,102,104,105,106]);
+        $img = $this->soap->createProductImage($file, $mime, 'sbrinz', $pid);
+        $this->assertContains('sbrinz',$img);
         $productInfo = $this -> soap -> getProductByID($pid);
         $this->assertNotEmpty($productInfo);
         $this->assertEquals($pid, $productInfo['product_id']);
