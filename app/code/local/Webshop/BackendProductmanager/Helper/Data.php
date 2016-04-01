@@ -77,9 +77,17 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
      */
     public function createProductImage($filename, $mime, $name, $productId)
     {
+        if(pathinfo(urldecode($filename), PATHINFO_EXTENSION) == "jpg"){
+            $img = imagecreatefromstring(file_get_contents(urldecode($filename)));
+            imagepng($img,$name . ".png");
+            $content = base64_encode($name . ".png");
+            $mime = "image/png";
+        } else{
+            $content = base64_encode(file_get_contents(urldecode($filename)));
+        }
+
         $file = array(
-            'content' =>
-                base64_encode(file_get_contents(urldecode($filename))),
+            'content' => $content,
             'mime' => $mime,
             'name' => $name
         );
@@ -112,27 +120,12 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
      * @param $name (display name in magento)
      * @param $oldFilename (Magento stored path and filename)
      * @param $productId
-     * @return boolean
-     * More: http://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProductAttributeMedia/catalog_product_attribute_media.update.html
+     * @return string stored image file name with path
      */
     public function updateProductImage($newFilename, $mime, $name, $oldFilename, $productId)
     {
-        $file = array(
-            'content' =>
-                base64_encode(file_get_contents($newFilename)),
-            'mime' => $mime,
-            'name' => $name
-        );
-
-        return $this->client->call(
-            $this->session,
-            'catalog_product_attribute_media.update',
-            array(
-                $productId,
-                $oldFilename,
-                array('file'=>$file, 'label'=>$name, 'position'=>'1', 'types'=>array('image','small_image','thumbnail'), 'exclude'=>null)
-            )
-        );
+        $this->removeProductImage($productId,$oldFilename);
+        return $this->createProductImage($newFilename,$mime,$name,$productId);
     }
 
     /**
@@ -166,21 +159,18 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
      * @param $shortDescription String
      * @param $weight           String
      * @param $status           String (Default: 1)
-     * @param $url_key          String (Default lower case product name)
      * @param $visibility       String (Default 4)
      * @param $price            String
      * @param $special_price    String Optional
      * @param $special_from_date String Optional
      * @param $special_to_date  String Optional
-     * @param $meta_title       String
-     * @param $meta_keyword    String
-     * @param $meta_description String
      * @param $stock            String
      * @return array with all product values
      */
-    public function createCatalogProductEntity($categories, $unit, $websites, $prodName, $description, $shortDescription, $weight, $status, $url_key
-        , $visibility, $price, $special_price, $special_from_date, $special_to_date, $meta_title, $meta_keyword, $meta_description, $stock)
+    public function createCatalogProductEntity($categories, $unit, $prodName, $shortDescription, $weight, $price, $stock
+        , $websites = array("1"), $description = '', $status = '1', $visibility = "4", $special_price = '', $special_from_date = '', $special_to_date = '')
     {
+        $prodNameURL = strtolower($prodName);
         return array(
             'categories' => $categories,
             'unit' => $unit,
@@ -190,16 +180,16 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
             'short_description' => $shortDescription,
             'weight' => $weight,
             'status' => $status,
-            'url_key' => $url_key,
+            'url_key' => $prodNameURL,
             'visibility' => $visibility,
             'price' => $price,
             'special_price' => $special_price,
             'special_from_date' => $special_from_date,
             'special_to_date' => $special_to_date,
             'tax_class_id' => 1,
-            'meta_title' => $meta_title,
-            'meta_keyword' => $meta_keyword,
-            'meta_description' => $meta_description,
+            'meta_title' => $prodName,
+            'meta_keyword' => $prodName,
+            'meta_description' => $shortDescription,
             array(
                 'qty' => $stock,
                 'is_in_stock' => "1"
