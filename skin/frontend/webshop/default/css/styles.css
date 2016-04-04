@@ -3745,8 +3745,8 @@ a.skip-link {
     display: block;
     position: absolute;
     z-index: 200;
-    top: 40px;
-    right: 115px;
+    top: 214px;
+    left:50%;
     width: 200px;
   }
 
@@ -3805,8 +3805,8 @@ a.skip-link {
     display: block;
     position: absolute;
     z-index: 200;
-    top: 40px;
-    right: 0;
+    top: 174px;
+    left: 62%;
     width: 320px;
     background: white;
   }
