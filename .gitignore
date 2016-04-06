@@ -39,6 +39,7 @@ app/Mage.php
 app/code/core/
 app/code/community/*
 !app/code/community/Ralab/*
+app/code/local/Mageworks/
 app/code/community/Phoenix/
 app/design/adminhtml/default/default
 app/design/adminhtml/default/mageworks
@@ -112,6 +113,7 @@ lib/Net/
 lib/Magento/
 lib/recaptcha/
 lib/Unserialize/
+media/
 media/customer/
 media/dhl/
 media/downloadable/
