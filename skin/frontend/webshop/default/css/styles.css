@@ -3297,7 +3297,7 @@ body {
   width: 20%;
   height: 44px;
   background: #FFFFFF;
-  color: #636363;
+ /* color: #636363; */
   line-height: 42px;
   text-align: center;
 }

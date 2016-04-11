@@ -16,8 +16,8 @@
         <?php foreach ($collection as $page): ?>
             <?php $PageData = $page->getData(); ?>
             <?php if($PageData['identifier']!='no-route' && $PageData['identifier']!='enable-cookies' && $PageData['identifier']!='home2' && $PageData['identifier'] != 'customer-service'){ ?>
-                <td class="nav-cell" width="200px">
-                    <a href="<?php echo Mage::getBaseUrl(); echo $PageData['identifier'];?>"><span><?php echo $PageData['title'] ?></span></a>
+                <td class="nav-cell" width="200px" class="customNav">
+                    <a href="<?php echo Mage::getBaseUrl(); echo $PageData['identifier'];?>" class="customNav"><span class="label" class="customNav"><?php echo $PageData['title'] ?></span></a>
                 </td>
             <?php } ?>
         <?php endforeach; ?>
@@ -40,7 +40,15 @@
 
 <!-- Holt alle Kategorien -->
 <?php
+
+
 /*
+ *
+ *
+ * class="skip-link"
+ *
+ *
+ *
 $_helper = Mage::helper('catalog/category');
 $_categories = $_helper->getStoreCategories();
 foreach($_categories as $_category){

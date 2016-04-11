@@ -13,15 +13,22 @@ a:focus {
 
 /*color settings footer */
 
+.footer-background {
+    background-color: #736F6E;
+}
+
 .footer .links a {
     color: #636363;
 }
 .footer .links a:hover {
-color: #3399cc;}
+color: #3399cc;
+}
 
 .footer .block-title,
-.footer address {
-    color: #3399cc;}
+.footer address
+{
+    color: #3399cc;
+}
 
 .header-text{
     height: 110px;
@@ -34,9 +41,7 @@ color: #3399cc;}
     text-align:center;
     background-color: white;
     padding: 10px;
-    border-left: 1px solid #EDEDED;
-    border-right: 1px solid #EDEDED;
-    border-top: 1px solid #EDEDED;
+    border: 1px solid #EDEDED;
     }
 
 .nav-cell:hover{
@@ -94,4 +99,48 @@ color: #3399cc;}
     display: inline-block;
     vertical-align: middle;
     margin: -2px 3px auto 3px;
+    text-decoration: none;
+}
+
+.customNav
+{
+    vertical-align: middle;
+}
+
+a.customNav
+{
+    top: 50%;
+    padding: 0 10px;
+    line-height: 44px;
+    background: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+span.customNav
+{
+
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.footer
+{
+    border-top: 0px;
+}
+
+.footer .links a {
+    color: #ffffff;
+}
+
+.footer p
+{
+    color: #ffffff;
+}
+
+.footer span
+{
+    font-size: 18px;
 }

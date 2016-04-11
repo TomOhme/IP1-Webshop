@@ -1,7 +1,108 @@
-.vertnav-container {
-	margin-top:10px;
+#vertnav li .vertnav-cat {
+	display:block;
+	border-bottom:1px gray;
+	padding:3px;
+	width:189px;
 }
 
+#vertnav .level0 .has-children
+{
+	color: #ffffff;
+}
+
+span.vertnav-cat {
+	color: #2e8ab8;
+}
+
+#vertnav .inactive .vertnav-cat {
+	background-color:#ffffff;
+}
+
+#vertnav .next .vertnav-cat {
+	background-color:#ffffff;
+}
+
+#vertnav .prev .vertnav-cat {
+	background-color:#ffffff;
+}
+
+#vertnav .first .vertnav-cat {
+}
+
+#vertnav .last .vertnav-cat {
+}
+
+#vertnav .only .vertnav-cat {
+}
+
+#vertnav li.parent .vertnav-cat {
+	/* background-color:#ffffff; */
+}
+
+
+#vertnav li.active .vertnav-cat {
+	color: #ffffff;
+	background-color: #3399cc;
+}
+
+#vertnav li.active .vertnav-cat a
+{
+	color: #ffffff;
+}
+
+#vertnav li.inactive .vertnav-cat {
+	font-weight:normal;
+}
+
+#vertnav .level0 .vertnav-cat {
+}
+
+#vertnav .level0 .vertnav-cat .active {
+	font-weight:bold;
+	color: #ffffff;
+	background-color: #3399cc;
+}
+
+#vertnav .level1 .vertnav-cat {
+	padding-left:15px;
+}
+
+#vertnav .level1 .vertnav-cat .active {
+	font-weight:bold;
+	background-color: #3399cc;
+}
+
+#vertnav .level1 .vertnav-cat .inactive span
+{
+	color: #2e8ab8;
+}
+
+#vertnav .level1 .vertnav-cat .inactive span{
+	font-weight:bold;
+	background-color: #3399cc;
+}
+
+#vertnav .level2 .vertnav-cat {
+	padding-left:30px;
+}
+
+#vertnav .level2 .vertnav-cat .active {
+	font-weight:bold;
+	background-color: #3399cc;
+}
+
+#vertnav .level3 .vertnav-cat {
+	padding-left:45px;
+}
+
+#vertnav .level3 .vertnav-cat .active {
+	font-weight:bold;
+	background-color: #3399cc;
+}
+
+
+
+/*
 #vertnav li .vertnav-cat {
 	display:block;
 	border-bottom:1px dotted gray;
@@ -64,3 +165,4 @@
 	padding-left:30px;
 	width:162px;
 }
+*/
