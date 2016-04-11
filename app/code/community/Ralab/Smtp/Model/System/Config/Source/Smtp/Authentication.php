@@ -14,7 +14,7 @@ class Ralab_Smtp_Model_System_Config_Source_Smtp_Authentication
     {
         //http://framework.zend.com/manual/current/en/modules/zend.mail.smtp.options.html
         return array(
-            "smtp" => Mage::helper('adminhtml')->__('None'),
+            "none" => Mage::helper('adminhtml')->__('None'),
             "login" => Mage::helper('adminhtml')->__('Login'),
             "plain" => Mage::helper('adminhtml')->__('Plain'),
             "crammd5" => Mage::helper('adminhtml')->__('CRAM MD5')

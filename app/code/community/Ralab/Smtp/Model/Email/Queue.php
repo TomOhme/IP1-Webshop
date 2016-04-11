@@ -8,7 +8,7 @@
  *
  */
 
-class Ralab_Smtp_Model_Email_Template extends Mage_Core_Model_Email_Queue       
+class Ralab_Smtp_Model_Email_Queue extends Mage_Core_Model_Email_Queue       
 {
     /**
      * Send all messages in a queue
