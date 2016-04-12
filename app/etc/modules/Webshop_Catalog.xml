@@ -4,6 +4,9 @@
         <Webshop_Catalog>
             <active>true</active>
             <codePool>local</codePool>
+            <depends>
+                <Mage_Api />
+            </depends>
         </Webshop_Catalog>
     </modules>
 </config>

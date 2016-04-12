@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webshop_Catalog>
+            <version>1.0</version>
+        </Webshop_Catalog>
+    </modules>
+    <global>
+        <models>
+            <catalog>
+                <rewrite>
+                    <product_api>Webshop_Catalog_Model_Product_Api</product_api>
+                </rewrite>
+            </catalog>
+        </models>
+    </global>
+</config>

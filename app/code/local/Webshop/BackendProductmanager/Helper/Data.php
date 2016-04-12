@@ -9,7 +9,7 @@ class Webshop_BackendProductmanager_Helper_Data extends Mage_Core_Helper_Abstrac
 
     private $session;
     private $client;
-    
+
     public function openSoap(){
         $soap = Mage::helper("soaphelper");
         $this -> session = $soap->initSoap();

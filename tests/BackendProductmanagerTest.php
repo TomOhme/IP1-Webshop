@@ -40,6 +40,7 @@ class Webshop_BackendProductmanager_Helper_DataTest extends PHPUnit_Framework_Te
         $this->assertContains('sbrinz',$img);
 
         $productInfo = $this -> soap -> getProductByID($pid);
+        var_dump($productInfo);
         $this->assertNotEmpty($productInfo);
         $this->assertEquals($pid, $productInfo['product_id']);
         $img = $this->soap->getProductImage($pid);
