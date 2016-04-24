@@ -81,6 +81,7 @@
                 <action method="addItem"><type>skin_css</type><name>css/madisonisland.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
 
                 <action method="addItem"><type>skin_css</type><name>css/webshop.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-->]]></if></action>
+           <!--     <action method="addItem"><type>skin_css</type><name>css/color.css</name><params/><if><![CDATA[<!--[if (gte IE 9) | (IEMobile)]><!-]]></if></action> -->
 
                 <!-- Sets viewport meta tag using text block -->
                 <block type="core/text" name="head.viewport">
