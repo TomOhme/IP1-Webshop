@@ -3490,6 +3490,7 @@ a.skip-link {
   border-bottom: 1px solid #cccccc;
 }
 
+
 .nav-primary .menu-active > ul.level0,
 .nav-primary li.level0 li.sub-menu-active > ul {
   display: block;
@@ -4596,7 +4597,8 @@ p.product-name a:hover {
   min-width: 50px;
 }
 .mini-products-list .product-details {
-  margin-left: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .mini-products-list .product-details .product-name {
   padding-top: 10px;
