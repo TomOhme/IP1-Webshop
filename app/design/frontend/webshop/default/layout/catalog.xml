@@ -116,7 +116,8 @@ Category layered navigation layout
         <label>Catalog Category (Anchor)</label>
         <reference name="left_first">
             <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml">
-                <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
+               <!-- <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" /> -->
+                <action method="unsetChild"><child>category_filter</child></action>
             </block>
         </reference>
         <reference name="content">
