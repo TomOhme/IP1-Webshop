@@ -39,6 +39,7 @@ app/Mage.php
 app/code/core/
 app/code/community/*
 !app/code/community/Ralab/*
+!app/code/community/Openstream/*
 app/code/local/Mageworks/
 app/code/community/Phoenix/
 app/design/adminhtml/default/default
