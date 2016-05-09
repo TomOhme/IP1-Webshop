@@ -14,6 +14,9 @@
             <block type="cms/block" name="footer_posts">
                 <action method="setBlockId"><block_id>footer_sitemap</block_id></action>
             </block>
+            <block type="cms/block" name="footer_posts">
+                <action method="setBlockId"><block_id>footer_sitemap2</block_id></action>
+            </block>
             <block type="cms/block" name="footer_news">
                 <action method="setBlockId"><block_id>footer_contact</block_id></action>
             </block>
