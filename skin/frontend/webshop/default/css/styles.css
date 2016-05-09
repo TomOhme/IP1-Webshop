@@ -3248,7 +3248,7 @@ body {
   padding: 10px;
 }
 .logo img {
-  max-width: 100%;
+  max-height: 150px;
 }
 .logo .small {
   display: block;
