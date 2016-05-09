@@ -155,3 +155,10 @@ composer.json
 
 .idea/
 magento.iml
+
+# Payment & Pickup Plugin
+!/app/code/community/IntegerNet/*
+!/app/design/adminhtml/default/template/integer_net/*
+!/app/design/frontend/base/default/template/integer_net/*
+!/app/etc/modules/IntegerNet_PickUp.xml
+!/app/locale/de_DE/IntegerNet_Pickup.csv
