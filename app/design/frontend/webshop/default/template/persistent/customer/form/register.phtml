@@ -51,10 +51,6 @@
                 <li class="fields">
                     <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
                 </li>
-            <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
-            <?php if ($_dob->isEnabled()): ?>
-                <li><?php echo $_dob->setDate($this->getFormData()->getDob())->toHtml() ?></li>
-            <?php endif ?>
             <?php $_taxvat = $this->getLayout()->createBlock('customer/widget_taxvat') ?>
             <?php if ($_taxvat->isEnabled()): ?>
                 <li><?php echo $_taxvat->setTaxvat($this->getFormData()->getTaxvat())->toHtml() ?></li>
@@ -144,6 +140,10 @@
                         </div>
                     </div>
                 </li>
+                <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
+                <?php if ($_dob->isEnabled()): ?>
+                    <li><?php echo $_dob->setDate($this->getFormData()->getDob())->toHtml() ?></li>
+                <?php endif ?>
                 <li>
                     <label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
                     <div class="input-box">
