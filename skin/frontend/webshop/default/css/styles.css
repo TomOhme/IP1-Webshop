@@ -530,7 +530,7 @@ h1, .h1 {
   font-style: normal;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h2, .h2 {
@@ -543,7 +543,7 @@ h2, .h2 {
   font-style: normal;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h3, .h3 {
@@ -556,7 +556,7 @@ h3, .h3 {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h4, .h4 {
@@ -569,7 +569,7 @@ h4, .h4 {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h5, .h5 {
@@ -582,7 +582,7 @@ h5, .h5 {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 h6, .h6 {
@@ -595,7 +595,7 @@ h6, .h6 {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* ============================================ *
@@ -608,7 +608,7 @@ h6, .h6 {
 .availability {
   margin-bottom: 0;
   font-size: 13px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .availability .label {
@@ -636,14 +636,14 @@ h6, .h6 {
 .page-title h2,
 .product-name h1,
 .product-name .h1 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 24px;
   font-weight: 600;
   color: #636363;
   border-bottom: 1px solid #ededed;
   padding-bottom: 3px;
   margin-bottom: 15px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* -------------------------------------------- *
@@ -676,10 +676,10 @@ h6, .h6 {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #3399cc;
   margin-bottom: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 600;
 }
 .block-title small {
@@ -756,7 +756,7 @@ body:not(.customer-account) .block:first-child .block-title {
     font-style: normal;
     line-height: 1.4;
     text-rendering: optimizeSpeed;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -802,7 +802,7 @@ body:not(.customer-account) .block:first-child .block-title {
     font-style: normal;
     line-height: 1.4;
     text-rendering: optimizeSpeed;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -855,7 +855,7 @@ body:not(.customer-account) .block:first-child .block-title {
 }
 .block-account li,
 .block-cms-menu li {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin: 7px 0;
 }
@@ -927,7 +927,7 @@ body:not(.customer-account) .block:first-child .block-title {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   line-height: 19px;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -993,7 +993,7 @@ a.button:hover {
   line-height: 30px;
   height: 30px;
   text-decoration: underline;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: inline-block;
   color: #3399cc;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
@@ -1144,7 +1144,7 @@ a.button:hover {
   float: left;
   font-size: 12px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .breadcrumbs a {
@@ -1533,7 +1533,7 @@ a.button:hover {
   color: #3399cc;
   text-align: center;
   margin: 10px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 
@@ -1928,7 +1928,7 @@ span.weee {
 
 .truncated .truncated_full_value .item-options > p {
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 8px;
 }
 
@@ -2106,7 +2106,7 @@ span.weee {
 .toolbar label,
 .pager-no-toolbar label {
   font-weight: normal;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .sorter {
@@ -2218,7 +2218,7 @@ span.weee {
   border: 0;
   font-size: 13px;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   vertical-align: middle;
   white-space: nowrap;
   line-height: 30px;
@@ -2520,7 +2520,7 @@ form .legend {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 15px;
   padding-bottom: 7px;
   border-bottom: 1px solid #ededed;
@@ -2889,7 +2889,7 @@ form .form-instructions {
 
 .data-table th {
   background: #f4f4f4;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   line-height: 1.4;
   white-space: nowrap;
@@ -3014,7 +3014,7 @@ form .form-instructions {
     font-size: 12px;
     font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
     padding-right: 5px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .linearize-table tfoot tr {
     display: block;
@@ -3097,7 +3097,7 @@ form .form-instructions {
     font-size: 12px;
     font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
     padding-right: 5px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .linearize-table-large tfoot tr {
     display: block;
@@ -3184,7 +3184,7 @@ body {
 .header-language-background {
   padding: 10px;
   background-color: #3399cc;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .header-language-background .header-language-container {
   max-width: 1200px;
@@ -3391,7 +3391,7 @@ a.skip-link {
     border-bottom: 1px solid #cccccc;
     text-align: left;
     color: #636363;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     line-height: 30px;
   }
 
@@ -3497,7 +3497,7 @@ a.skip-link {
 }
 
 .nav-primary li.level0 > a {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* ============================================ *
@@ -3737,7 +3737,7 @@ a.skip-link {
     vertical-align: top;
     display: inline-block;
     padding: 0 10px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 
   #header-account.skip-active {
@@ -3851,7 +3851,7 @@ a.skip-link {
 @media only screen and (min-width: 771px) {
   .skip-cart {
     color: #3399cc;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .skip-cart:hover {
     text-decoration: none;
@@ -4020,7 +4020,7 @@ a.skip-link {
 }
 .footer .links,
 .footer .block-subscribe {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 12px;
 }
 .footer .form-subscribe-header {
@@ -4206,7 +4206,7 @@ p.product-name {
   font-style: normal;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 13px;
   font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
   font-weight: normal;
@@ -4230,7 +4230,7 @@ p.product-name a:hover {
 
 .products-grid .product-name,
 .products-list .product-name {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 5px;
   font-size: 14px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
@@ -4665,7 +4665,7 @@ p.product-name a:hover {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -4712,7 +4712,7 @@ p.product-name a:hover {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -4908,7 +4908,7 @@ p.product-name a:hover {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .block-layered-nav .currently ol {
   padding-left: 10px;
@@ -5013,7 +5013,7 @@ p.product-name a:hover {
 }
 .product-view .product-shop .price-box .special-price .price-label {
   font-size: 16px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .product-view .product-shop .price-box .special-price span.weee {
   color: #636363;
@@ -5386,7 +5386,7 @@ p.product-name a:hover {
     height: 40px;
     line-height: 40px;
     cursor: pointer;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 12px;
     position: relative;
     bottom: -1px;
@@ -5442,7 +5442,7 @@ p.product-name a:hover {
     font-style: normal;
     line-height: 1.4;
     text-rendering: optimizeSpeed;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -5829,7 +5829,7 @@ p.product-name a:hover {
   font-style: normal;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 0;
 }
 .block-related .block-subtitle {
@@ -5895,7 +5895,7 @@ p.product-name a:hover {
   margin: 10px 10px 0;
   padding: 10px;
   text-align: right;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .map-cart-sidebar-total {
@@ -6347,7 +6347,7 @@ p.product-name a:hover {
 .cart-table span.or {
   font-size: 9px;
   padding: 0 5px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 .cart-table .product-cart-image .cart-links,
@@ -6501,7 +6501,7 @@ p.product-name a:hover {
     font-size: 12px;
     font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
     padding-right: 5px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .cart-table td.product-cart-price {
     text-align: left;
@@ -6537,7 +6537,7 @@ p.product-name a:hover {
     display: block;
     font-size: 16px;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .cart-table .product-cart-info,
   .cart-table td[data-rwd-label] {
@@ -6659,7 +6659,7 @@ p.product-name a:hover {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   white-space: nowrap;
 }
 .shipping .sp-methods {
@@ -6718,7 +6718,7 @@ p.product-name a:hover {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   width: 100%;
 }
 .cart .cart-totals table td {
@@ -6780,7 +6780,7 @@ p.product-name a:hover {
   font-size: 12px;
   font-weight: 400;
   text-align: left;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   min-width: 105px;
   display: inline-block;
   margin-right: 10px;
@@ -7206,9 +7206,9 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 6px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: normal;
   color: #a0a0a0;
 }
@@ -7851,7 +7851,7 @@ body.customer-account .data-table {
 }
 body.customer-account .data-table td a {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-style: normal;
   font-size: 13px;
 }
@@ -7929,7 +7929,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 }
 .dashboard .box-title a,
 .dashboard .box-head a {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 12px;
 }
 .dashboard .box-account {
@@ -8064,7 +8064,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 
 .order-date {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .order-info-box {
@@ -8120,7 +8120,7 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 .order-info-box .box-content strong {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 #my-orders-table .option-label {
@@ -8532,7 +8532,7 @@ div.paypal-logo span > img {
 #customer-reviews .review-heading .pager .count-container .limiter label {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #customer-reviews .review-heading .pager .amount {
   display: none;
@@ -8540,7 +8540,7 @@ div.paypal-logo span > img {
 #customer-reviews h2 {
   color: #3399cc;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #customer-reviews h2 span {
   color: #636363;
@@ -8549,7 +8549,7 @@ div.paypal-logo span > img {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #customer-reviews h3 span {
   color: #3399cc;
@@ -8564,7 +8564,7 @@ div.paypal-logo span > img {
   font-size: 12px;
   font-weight: normal;
   padding-bottom: 5px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #customer-reviews .fieldset h4 em {
   display: none;
@@ -8574,7 +8574,7 @@ div.paypal-logo span > img {
   font-size: 12px;
   font-weight: normal;
   margin: 10px 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   width: 470px;
 }
 #customer-reviews .fieldset .form-list .inline-label:after {
@@ -8612,7 +8612,7 @@ div.paypal-logo span > img {
 }
 #customer-reviews dl dt {
   margin: 10px 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #customer-reviews dl dd {
   font-family: Georgia, Times, "Times New Roman", serif;
@@ -8639,7 +8639,7 @@ div.paypal-logo span > img {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 10px;
   font-weight: normal;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .review-summary-table {
@@ -8688,7 +8688,7 @@ div.paypal-logo span > img {
 .ratings-table {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .ratings-table th {
   padding-right: 10px;
@@ -8975,7 +8975,7 @@ div.paypal-logo span > img {
 #wishlist-table.clean-table {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   width: 100%;
 }
 #wishlist-table.clean-table th {
@@ -8988,13 +8988,13 @@ div.paypal-logo span > img {
 #wishlist-table.clean-table thead th {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #wishlist-table .product-name {
   font-size: 16px;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin-bottom: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #wishlist-table .product-name a {
   color: #3399cc;
@@ -9012,16 +9012,16 @@ div.paypal-logo span > img {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
 }
 #wishlist-table textarea::-webkit-input-placeholder {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #wishlist-table textarea:-moz-placeholder {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #wishlist-table textarea::-moz-placeholder {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #wishlist-table textarea:-ms-input-placeholder {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 #wishlist-table textarea:focus {
   border: 1px solid #3399cc;
@@ -9252,7 +9252,7 @@ div.paypal-logo span > img {
 }
 .block-wishlist .link-cart {
   float: left;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-right: 7px;
   padding-right: 7px;
   border-right: 1px solid #ededed;
@@ -9318,7 +9318,7 @@ div.paypal-logo span > img {
   line-height: 1.4;
   padding: 5px;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: 0px;
 }
 .header-minicart .block-subtitle .close {
@@ -9359,7 +9359,7 @@ div.paypal-logo span > img {
   margin-bottom: 0.5em;
 }
 .header-minicart .info-wrapper th {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   padding-right: 10px;
 }
 .header-minicart .info-wrapper td {
@@ -9414,7 +9414,7 @@ div.paypal-logo span > img {
 }
 .header-minicart .subtotal .label {
   color: white;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .header-minicart .subtotal .price {
   color: #3399cc;
@@ -9432,7 +9432,7 @@ div.paypal-logo span > img {
 .header-minicart .minicart-actions .cart-link {
   height: 33px;
   line-height: 39px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 13px;
 }
 .header-minicart .minicart-actions .paypal-logo .paypal-or {
@@ -9621,7 +9621,7 @@ div.paypal-logo span > img {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin-top: 20px;
   padding-bottom: 10px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .product-review .product-img-box .rating-box {
   margin: 15px 0;
@@ -9644,7 +9644,7 @@ div.paypal-logo span > img {
   float: left;
   font-size: 12px;
   margin-right: 10px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .product-review .ratings-description dt {
   border-bottom: 1px solid #cccccc;
@@ -9653,7 +9653,7 @@ div.paypal-logo span > img {
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   margin-top: 20px;
   padding: 10px 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .product-review .ratings-description dd {
   color: #737373;
@@ -9761,7 +9761,7 @@ div.paypal-logo span > img {
   font-style: normal;
   line-height: 1.4;
   text-rendering: optimizeSpeed;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -9860,7 +9860,7 @@ div.paypal-logo span > img {
   color: #cf5050;
   font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .map-info {
@@ -10402,7 +10402,7 @@ body[class*="checkout-multishipping-"] .checkout-progress > li {
   text-align: center;
   padding: 8px 1% 6px;
   background: #f4f4f4;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   margin-bottom: 10px;
