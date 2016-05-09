@@ -9370,6 +9370,18 @@ div.paypal-logo span > img {
   height: 33px;
   line-height: 33px;
 }
+
+.info-wrapper .qty-wrapper input
+{
+  margin-left: 5px;
+  width: 197px;
+}
+
+.info-wrapper .qty-wrapper th
+{
+  padding-bottom: 30px;
+}
+
 .header-minicart .info-wrapper .qty {
   padding-left: 4px;
   padding-right: 4px;
