@@ -50,8 +50,9 @@
                 <action method="addJs"><script>mage/translate.js</script></action>
                 <action method="addJs"><script>mage/cookies.js</script></action>
 
+                <!-- Webshop Custom JS Files -->
                 <action method="addJs"><script>webshop/webshop.js</script></action>
-                <action method="addJs"><script>http://code.jquery.com/jquery-2.1.4.min.js</script></action>
+                <action method="addJs"><script>webshop/validation.js</script></action>
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
