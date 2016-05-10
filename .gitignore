@@ -164,17 +164,18 @@ magento.iml
 !/app/etc/modules/IntegerNet_PickUp.xml
 !/app/locale/de_DE/IntegerNet_Pickup.csv
 
+
 # Translation Plugin
-!/app/code/community/German/*
-!/app/design/adminhtml/default/default/layout/localepackde.xml
-!/app/design/adminhtml/default/default/locale/de_DE/translate.csv
-!/app/design/frontend/default/blank/locale/de_DE/translate.csv
-!/app/design/frontend/default/default/locale/de_DE/translate.csv
-!/app/design/frontend/default/iphone/locale/de_DE/translate.csv
-!/app/design/frontend/default/modern/locale/de_DE/translate.csv
-!/app/etc/modules/German_LocalePackDe.xml
-!/app/locale/de_DE/*
-!/app/locale/en_US/German_LocalePackDe.csv
-!/js/german/*
-!/js/tiny_mce/*
-!/package/Locale_Mage_community_de_DE.xml
+!app/code/community/German/*
+!app/design/adminhtml/default/default/layout/localepackde.xml
+!app/design/adminhtml/default/default/locale/de_DE/translate.csv
+!app/design/frontend/default/blank/locale/de_DE/translate.csv
+!app/design/frontend/default/default/locale/de_DE/translate.csv
+!app/design/frontend/default/iphone/locale/de_DE/translate.csv
+!app/design/frontend/default/modern/locale/de_DE/translate.csv
+!app/etc/modules/German_LocalePackDe.xml
+!app/locale/de_DE/*
+!app/locale/en_US/German_LocalePackDe.csv
+!js/german/*
+!js/tiny_mce/*
+!package/Locale_Mage_community_de_DE.xml
