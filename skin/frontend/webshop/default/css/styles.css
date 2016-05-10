@@ -6968,7 +6968,7 @@ p.product-name a:hover {
 }
 
 .opc .section.allow .step-title .number {
-  background-color: #99cce5;
+  background-color: #e69999;
 }
 
 .opc .section.allow .step-title h2 {
@@ -7138,6 +7138,11 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .sp-methods .form-list {
   padding-left: 20px;
 }
+
+ul#payment_form_pickup {
+  padding-left: 0px;
+}
+
 .sp-methods .form-list li {
   margin: 0 0 8px;
 }
@@ -10616,4 +10621,17 @@ div.calendar table td.button {
   background: inherit;
   color: inherit;
   text-transform: none;
+}
+
+div#header-cart {
+  margin-top: 20px;
+}
+
+div#header-account {
+  margin-top: 20px;
+}
+
+.header-text h1 {
+  margin-top: 20%;
+  margin-right: 20px;
 }
