@@ -551,7 +551,7 @@ class Webshop_Customer_AccountController extends Mage_Customer_AccountController
     protected function _welcomeCustomer(Mage_Customer_Model_Customer $customer, $isJustConfirmed = false)
     {
         $this->_getSession()->addSuccess(
-            $this->__('Thank you for registering with %s.', Mage::app()->getStore()->getFrontendName())
+            $this->__('Vielen Dank für Ihre Registrierung.', Mage::app()->getStore()->getFrontendName())
         );
         if ($this->_isVatValidationEnabled()) {
             // Show corresponding VAT message to customer
