@@ -44,7 +44,7 @@
             <dt><?php echo $this->__('Category') ?></dt>
             <dd>
                 <ol>
-                <?php foreach ($_categories as $_category): ?>
+                    <?php foreach ($_categories as $_category): ?>
                     <?php if($_category->getIsActive()): ?>
                     <li>
                         <a href="<?php echo $this->getCategoryUrl($_category) ?>"<?php if ($this->isCategoryActive($_category)): ?> class="current"<?php endif; ?>>
