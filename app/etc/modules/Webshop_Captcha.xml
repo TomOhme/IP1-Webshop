@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webshop_Captcha>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                            <Mage_Captcha />
+                        </depends>
+        </Webshop_Captcha>
+    </modules>
+</config>
