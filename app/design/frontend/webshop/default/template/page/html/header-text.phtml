@@ -5,10 +5,19 @@
  * Date: 26.11.2015
  * Time: 09:56
  */
+
+
+//Get discount data from the database
+$resource = Mage::getSingleton('core/resource');
+$readConnection = $resource->getConnection('core_read');
+$query = 'SELECT name FROM store_title WHERE 1;';
+$results = $readConnection->fetchAll($query);
+
+$row = $results[0]['name'];
+
 ?>
 
 <div class="header-text">
 
-    <h1>Bauernhof Meier</h1>
-
+    <h1><?php echo $row ?></h1>
 </div>
