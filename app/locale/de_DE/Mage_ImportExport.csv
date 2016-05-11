@@ -85,7 +85,7 @@
 "There are no product types available for export","Für den Export stehen keine Artikelarten zur Verfügung"
 "There is no data for export","Es stehen keine Daten für einen Export zur Verfügung"
 "To","Bis"
-"Total size of uploadable files must not exceed %s","Die Gesamtgröße der hochzuladenden Datei darf %s nicht überschreiten"
+"Total size of uploadable files must not exceed %s","Die Gesamtgrösse der hochzuladenden Datei darf %s nicht überschreiten"
 "Unknown attribute filter type","Unbekannter Attributfiltertyp"
 "Uploaded file has no extension","Hochgeladene Datei hat keine Dateierweiterung"
 "Validation finished successfully","Überprüfung erfolgreich abgeschlossen"
