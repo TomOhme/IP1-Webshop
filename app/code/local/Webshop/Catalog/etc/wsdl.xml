@@ -16,6 +16,7 @@
                     <element name="category_ids" type="typens:ArrayOfString"/>
                     <element name="website_ids" type="typens:ArrayOfString"/>
                     <element name="price" type="xsd:string"/>
+                    <element name="unit" type="xsd:string"/>
                 </all>
             </complexType>
         </schema>

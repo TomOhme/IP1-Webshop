@@ -70,7 +70,8 @@ class Webshop_Catalog_Model_Product_Api extends Mage_Catalog_Model_Api_Resource
         'small_image_label',
         'thumbnail_label',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'unit'
     );
 
     public function __construct()
@@ -92,7 +93,8 @@ class Webshop_Catalog_Model_Product_Api extends Mage_Catalog_Model_Api_Resource
         $collection = Mage::getModel('catalog/product')->getCollection()
             ->addStoreFilter($this->_getStoreId($store))
             ->addAttributeToSelect('name')
-            ->addAttributeToSelect('price');
+            ->addAttributeToSelect('price')
+            ->addAttributeToSelect('unit');
 
         /** @var $apiHelper Mage_Api_Helper_Data */
         $apiHelper = Mage::helper('api');
@@ -106,6 +108,11 @@ class Webshop_Catalog_Model_Product_Api extends Mage_Catalog_Model_Api_Resource
         }
         $result = array();
         foreach ($collection as $product) {
+            $iDefaultStoreId = Mage::app()
+                ->getWebsite()
+                ->getDefaultGroup()
+                ->getDefaultStoreId();
+            $unit = Mage::getResourceModel('catalog/product')->getAttributeRawValue($product->getId(), 'unit', $iDefaultStoreId);
             $result[] = array(
                 'product_id' => $product->getId(),
                 'sku'        => $product->getSku(),
@@ -114,7 +121,8 @@ class Webshop_Catalog_Model_Product_Api extends Mage_Catalog_Model_Api_Resource
                 'type'       => $product->getTypeId(),
                 'category_ids' => $product->getCategoryIds(),
                 'website_ids'  => $product->getWebsiteIds(),
-                'price'     => $product->getPrice()
+                'price'     => $product->getPrice(),
+                'unit'      =>$unit
             );
         }
         return $result;
