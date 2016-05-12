@@ -437,6 +437,7 @@ fieldset {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 ol,
@@ -3246,6 +3247,7 @@ body {
   min-height: 44px;
   text-align: center;
   padding: 10px;
+  margin-right: 5%;
 }
 .logo img {
   max-height: 150px;
@@ -10632,6 +10634,6 @@ div#header-account {
 }
 
 .header-text h1 {
-  margin-top: 20%;
+  margin-top: 10%;
   margin-right: 20px;
 }
