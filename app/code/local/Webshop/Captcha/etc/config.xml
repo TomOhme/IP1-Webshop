@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webshop_Captcha>
+            <version>1.7.0.0.0</version>
+        </Webshop_Captcha>
+    </modules>
+    <global>
+        <models>
+            <webshop_captcha>
+                    <class>Webshop_Captcha_Model</class>
+            </webshop_captcha>
+            <captcha>
+                <rewrite>
+                    <observer>Webshop_Captcha_Model_Observer</observer>
+                </rewrite>
+            </captcha>
+        </models>
+        <events>
+            <controller_action_predispatch_checkout_onepage_savebilling>
+                <observers>
+                    <captcha_guest>
+                        <class>captcha/observer</class>
+                        <method>checkGuestCheckout</method>
+                    </captcha_guest>
+                    <captcha_register>
+                        <class>captcha/observer</class>
+                        <method>checkRegisterCheckout</method>
+                    </captcha_register>
+                </observers>
+            </controller_action_predispatch_checkout_onepage_savebilling>
+        </events>
+    </global>
+</config>
