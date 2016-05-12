@@ -64,7 +64,7 @@ Load this update on every page when customer is logged in
     <customer_logged_in>
         <reference name="top.links">
             <action method="addLink" translate="label title" module="customer"><label>Mein Account</label><url helper="customer/getAccountUrl"/><title>Mein Account</title><prepare/><urlParams/><position>10</position></action>
-            <action method="addLink" translate="label title" module="customer"><label>My Orders</label><path>sales/order/history/</path><title>Mein Account</title><prepare/><urlParams/><position>11</position></action>
+            <action method="addLink" translate="label" module="sales"><name>Meine Bestellungen</name><path>sales/order/history/</path><label>My Orders</label><prepare/><urlParams/><position>11</position></action>
             <action method="removeLinkByUrl"><url helper="customer/getRegisterUrl" /></action>
             <action method="addLink" translate="label title" module="customer"><label>Abmelden</label><url helper="customer/getLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>100</position></action>
         </reference>
