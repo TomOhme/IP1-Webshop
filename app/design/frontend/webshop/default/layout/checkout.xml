@@ -37,8 +37,10 @@ Default layout, loads most of the pages
         <!-- Mage_Checkout -->
         <reference name="top.links">
             <block type="checkout/links" name="checkout_cart_link">
+                <!-- remove cart and checkout from "Benutzerkonto"
                 <action method="addCartLink"></action>
                 <action method="addCheckoutLink"></action>
+                -->
             </block>
         </reference>
 
