@@ -4518,7 +4518,7 @@ p.product-name a:hover {
 
 .products-list .product-shop {
   float: right;
-  width: 66.66667%;
+  width: 60%;
   padding-left: 20px;
 }
 .products-list .product-shop .product-name {
@@ -4961,7 +4961,7 @@ p.product-name a:hover {
   border: 0;
 }
 .product-view .product-shop {
-  width: 50%;
+  width: 60%;
   float: right;
 }
 .product-view .product-shop .product-name {
@@ -5046,7 +5046,7 @@ p.product-name a:hover {
 }
 .product-view .add-to-cart-wrapper,
 .product-view .block-related {
-  width: 50%;
+  width: 60%;
   float: right;
   clear: right;
 }
@@ -5087,7 +5087,7 @@ p.product-name a:hover {
   }
 }
 .product-img-box {
-  width: 50%;
+  width: 40%;
   float: left;
 }
 .product-img-box .product-name h1 {

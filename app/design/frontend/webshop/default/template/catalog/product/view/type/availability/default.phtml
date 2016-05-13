@@ -24,16 +24,18 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 $_product = $this->getProduct(); ?>
-<?php if ($this->displayProductStockStatus()): ?>
-    <?php if ($_product->isAvailable()): ?>
+<!-- remove availability since products are hidden by specification anyways when out of stock
+<?php //if ($this->displayProductStockStatus()): ?>
+    <?php //if ($_product->isAvailable()): ?>
         <p class="availability in-stock">
-            <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
-            <span class="value"><?php echo $this->helper('catalog')->__('In stock') ?></span>
+            <span class="label"><?php //echo $this->helper('catalog')->__('Availability:') ?></span>
+            <span class="value"><?php //echo $this->helper('catalog')->__('In wffstock') ?></span>
         </p>
-    <?php else: ?>
+    <?php //else: ?>
         <p class="availability out-of-stock">
-            <span class="label"><?php echo $this->helper('catalog')->__('Availability:') ?></span>
-            <span class="value"><?php echo $this->helper('catalog')->__('Out of stock') ?></span>
+            <span class="label"><?php //echo $this->helper('catalog')->__('Availability:') ?></span>
+            <span class="value"><?php //echo $this->helper('catalog')->__('Out of stock') ?></span>
         </p>
-    <?php endif; ?>
-<?php endif; ?>
+    <?php //endif; ?>
+<?php //endif; ?>
+-->
