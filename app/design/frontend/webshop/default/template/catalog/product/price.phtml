@@ -207,7 +207,10 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                     <?php if ($_finalPrice == $_price): ?>
                         <?php echo $_coreHelper->formatPrice($_price, true) ?>
                     <?php else: ?>
-                        <?php echo $_coreHelper->formatPrice($_finalPrice, true) ?>
+                        <?php
+                        echo $_coreHelper->formatPrice($_finalPrice, true);
+                        echo "Rabatt in % ". 100 / $_price * $_finalPrice;
+                        ?>
                     <?php endif; ?>
                 </span>
             <?php endif; ?>
