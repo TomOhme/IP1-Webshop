@@ -207,7 +207,9 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                     <?php if ($_finalPrice == $_price): ?>
                         <?php echo $_coreHelper->formatPrice($_price, true) ?>
                     <?php else: ?>
-                        <?php echo $_coreHelper->formatPrice($_finalPrice, true) ?>
+                        <?php
+                        echo $_coreHelper->formatPrice($_finalPrice, true);
+                        ?>
                     <?php endif; ?>
                 </span>
             <?php endif; ?>
@@ -385,6 +387,8 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                     <?php echo $_coreHelper->formatPrice($_finalPrice, false) ?>
                 </span>
                 </p>
+                <br>
+                <p class="price-label"><?php echo "Ihr Rabatt:  ". round(100 - (100 / $_price * $_finalPrice),0, PHP_ROUND_HALF_DOWN)." %"; ?></p>
             <?php endif; ?>
         <?php endif; ?>
 
