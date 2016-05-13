@@ -28,6 +28,7 @@ class Webshop_BackendRabattsystem_Model_Observer{
                 $orders = Mage::getResourceModel('sales/order_collection')
                     ->addFieldToSelect('base_grand_total')
                     ->addFieldToFilter('customer_id', $customer_id)
+                    ->addFieldToFilter('status', 'complete')
                     ->addAttributeToFilter('created_at', array('from' => $fromDate, 'to' => $toDate))
                 ;
                 $orders = $orders->getData();
