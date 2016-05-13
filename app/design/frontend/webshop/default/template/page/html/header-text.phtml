@@ -10,7 +10,7 @@
 //Get stopname from the database
 $resource = Mage::getSingleton('core/resource');
 $readConnection = $resource->getConnection('core_read');
-$query = 'SELECT name FROM store_title WHERE 1;';
+$query = 'SELECT name FROM core_store_group WHERE website_id = 1;';
 $results = $readConnection->fetchAll($query);
 
 $row = $results[0]['name'];
