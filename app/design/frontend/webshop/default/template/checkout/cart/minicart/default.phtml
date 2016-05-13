@@ -133,6 +133,7 @@
                             data-cart-item-id="<?php echo $_item->getSku(); ?>"
                             class="qty cart-item-quantity input-text" name=""
                             value="<?php echo $this->getQty()?>"
+                            type="number"
                             <?php if ($this->isOnCheckoutPage()) echo 'disabled'; ?>
                             />
                         <?php echo " ".$_item->getProduct()->getUnit()?>
