@@ -27,7 +27,7 @@
 //Get the css path from the database
 $resource = Mage::getSingleton('core/resource');
 $readConnection = $resource->getConnection('core_read');
-$query = 'SELECT path FROM css_color WHERE 1;';
+$query = 'SELECT path FROM store_design WHERE 1;';
 $results = $readConnection->fetchAll($query);
 
 $row = $results[0]['path'];

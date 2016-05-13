@@ -1,3 +1,4 @@
+/*
 #vertnav li .vertnav-cat {
 	display:block;
 	border-bottom:1px gray;
@@ -36,7 +37,7 @@ span.vertnav-cat {
 }
 
 #vertnav li.parent .vertnav-cat {
-	/* background-color:#ffffff; */
+
 }
 
 
@@ -102,7 +103,7 @@ span.vertnav-cat {
 
 
 
-/*
+
 #vertnav li .vertnav-cat {
 	display:block;
 	border-bottom:1px dotted gray;
