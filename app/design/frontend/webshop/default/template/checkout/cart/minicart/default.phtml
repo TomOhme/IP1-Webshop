@@ -134,6 +134,7 @@
                             class="qty cart-item-quantity input-text validate-greater-than-zero" name=""
                             value="<?php echo $this->getQty()?>"
                             type="number"
+                            min="1"
                             <?php if ($this->isOnCheckoutPage()) echo 'disabled'; ?>
                             />
                         <?php echo " ".$_item->getProduct()->getUnit()?>
