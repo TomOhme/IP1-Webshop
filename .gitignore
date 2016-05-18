@@ -158,15 +158,16 @@ composer.json
 magento.iml
 
 # Payment & Pickup Plugin
-!/app/code/community/IntegerNet/*
-!/app/design/adminhtml/default/template/integer_net/*
-!/app/design/frontend/base/default/template/integer_net/*
+!/app/code/community/IntegerNet/*/*
+!/app/design/adminhtml/default/template/integer_net/*/*
+!/app/design/frontend/base/default/template/integer_net/*/*
 !/app/etc/modules/IntegerNet_PickUp.xml
 !/app/locale/de_DE/IntegerNet_Pickup.csv
 
 
 # Translation Plugin
-!app/code/community/German/*
+!*app/code/community/German/*
+!*app/code/community/German/**/*
 !app/design/adminhtml/default/default/layout/localepackde.xml
 !app/design/adminhtml/default/default/locale/de_DE/translate.csv
 !app/design/frontend/default/blank/locale/de_DE/translate.csv
@@ -174,8 +175,11 @@ magento.iml
 !app/design/frontend/default/iphone/locale/de_DE/translate.csv
 !app/design/frontend/default/modern/locale/de_DE/translate.csv
 !app/etc/modules/German_LocalePackDe.xml
-!app/locale/de_DE/*
+!*app/locale/de_DE/*
+!*app/locale/de_DE/**/*
 !app/locale/en_US/German_LocalePackDe.csv
-!js/german/*
-!js/tiny_mce/*
+!*js/german/*
+!*js/german/**/*
+!*js/tiny_mce/*
+!*js/tiny_mce/**/*
 !package/Locale_Mage_community_de_DE.xml
