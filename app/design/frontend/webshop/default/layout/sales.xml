@@ -50,7 +50,14 @@ Customer account pages, rendered for all tabs in dashboard
     <customer_account>
         <!-- Mage_Sales -->
         <reference name="customer_account_navigation">
-            <action method="addLink" translate="label" module="sales"><name>orders</name><path>*/*/sales/order/history/</path><label>My Orders</label></action>
+            <!-- François 20160518 add "Meine Bestellungen" to Header popup menu -->
+            <action method="addLink" translate="label title">
+                <label>Meine Bestellungen</label>
+                <url>sales/order/history</url>
+                <title>Meine Bestellungen</title>
+                <urlParams helper="core/url/getHomeUrl" />
+                <position>11</position>
+            </action>
         </reference>
         <reference name="left">
             <block type="sales/reorder_sidebar" name="sale.reorder.sidebar" as="reorder" template="sales/reorder/sidebar.phtml"/>

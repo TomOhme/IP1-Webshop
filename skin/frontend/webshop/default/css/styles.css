@@ -1327,7 +1327,7 @@ a.button:hover {
 .col-left,
 .col-right,
 .col-main {
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 .col-left {
