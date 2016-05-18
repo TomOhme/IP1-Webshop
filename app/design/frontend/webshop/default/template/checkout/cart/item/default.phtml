@@ -208,9 +208,9 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
     <?php endif; ?>
     <td class="product-cart-actions" data-rwd-label="<?php echo $this->__('Qty'); ?>">
 
-        <input type="number" pattern="\d*" name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty()?>" size="4"
+        <input type="number" pattern="\d*" min="1" name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty()?>" size="4"
                data-cart-item-id="<?php echo $this->jsQuoteEscape($_item->getSku()) ?>"
-               title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="input-text qty" maxlength="12" />
+               title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="input-text qty validate-greater-than-zero" maxlength="12" />
         <?php echo " ".$_item->getProduct()->getUnit()?>
         <button type="submit" name="update_cart_action" data-cart-item-update value="update_qty" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Update')); ?>" class="button btn-update"><span><span><?php echo $this->__('Update'); ?></span></span>
         </button>

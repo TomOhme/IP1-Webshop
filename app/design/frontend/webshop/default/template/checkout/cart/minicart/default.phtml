@@ -131,7 +131,7 @@
                             data-link="<?php echo $this->getAjaxUpdateUrl() ?>"
                             data-item-id="<?php echo $_item->getId(); ?>"
                             data-cart-item-id="<?php echo $_item->getSku(); ?>"
-                            class="qty cart-item-quantity input-text" name=""
+                            class="qty cart-item-quantity input-text validate-greater-than-zero" name=""
                             value="<?php echo $this->getQty()?>"
                             type="number"
                             <?php if ($this->isOnCheckoutPage()) echo 'disabled'; ?>
