@@ -55,22 +55,24 @@
     </div>
 </div>
 
-<?php if (count($this->getGalleryImages()) > 0): ?>
+<!-- remove additional pictures
+<?php //if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
-    <h2><?php echo $this->__('More Views') ?></h2>
+    <h2><?php //echo $this->__('More Views') ?></h2>
     <ul class="product-image-thumbs">
-    <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
-        <?php if ($this->isGalleryImageVisible($_image)): ?>
+    <?php //$i=0; foreach ($this->getGalleryImages() as $_image): ?>
+        <?php //if ($this->isGalleryImageVisible($_image)): ?>
         <li>
-            <a class="thumb-link" href="#" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>" data-image-index="<?php echo $i; ?>">
-                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75); ?>"
-                     width="75" height="75" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
+            <a class="thumb-link" href="#" title="<?php //echo $this->escapeHtml($_image->getLabel()) ?>" data-image-index="<?php //echo $i; ?>">
+                <img src="<?php //echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75); ?>"
+                     width="75" height="75" alt="<?php //echo $this->escapeHtml($_image->getLabel()) ?>" />
             </a>
         </li>
-        <?php endif; ?>
-    <?php $i++; endforeach; ?>
+        <?php //endif; ?>
+    <?php //$i++; endforeach; ?>
     </ul>
 </div>
-<?php endif; ?>
+<?php //endif; ?>
+-->
 
 <?php echo $this->getChildHtml('after'); ?>
