@@ -2689,7 +2689,7 @@ input[type=text] {
  */
 input[type=number].qty,
 input[type=text].qty {
-  width: 3em;
+  width: 4em;
   text-align: center;
   vertical-align: middle;
 }
@@ -6438,7 +6438,7 @@ p.product-name a:hover {
   border-radius: 0;
   margin-bottom: 10px;
   text-align: center;
-  width: 3.2em;
+  width: 4em;
 }
 .cart-table .product-cart-actions .button {
   margin-bottom: 5px;
