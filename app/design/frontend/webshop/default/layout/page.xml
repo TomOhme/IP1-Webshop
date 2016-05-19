@@ -45,7 +45,9 @@
                 <action method="addJs"><script>scriptaculous/dragdrop.js</script></action>
                 <action method="addJs"><script>scriptaculous/controls.js</script></action>
                 <action method="addJs"><script>scriptaculous/slider.js</script></action>
+                <!-- use own js.js
                 <action method="addJs"><script>varien/js.js</script></action>
+                -->
                 <action method="addJs"><script>varien/form.js</script></action>
                 <action method="addJs"><script>mage/translate.js</script></action>
                 <action method="addJs"><script>mage/cookies.js</script></action>
@@ -53,6 +55,7 @@
                 <!-- Webshop Custom JS Files -->
                 <action method="addJs"><script>webshop/webshop.js</script></action>
                 <action method="addJs"><script>webshop/validation.js</script></action>
+                <action method="addJs"><script>webshop/js.js</script></action>
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
