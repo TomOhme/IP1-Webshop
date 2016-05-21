@@ -1327,7 +1327,7 @@ a.button:hover {
 .col-left,
 .col-right,
 .col-main {
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 .col-left {
@@ -2689,7 +2689,7 @@ input[type=text] {
  */
 input[type=number].qty,
 input[type=text].qty {
-  width: 3em;
+  width: 4em;
   text-align: center;
   vertical-align: middle;
 }
@@ -4518,7 +4518,7 @@ p.product-name a:hover {
 
 .products-list .product-shop {
   float: right;
-  width: 66.66667%;
+  width: 60%;
   padding-left: 20px;
 }
 .products-list .product-shop .product-name {
@@ -4961,7 +4961,7 @@ p.product-name a:hover {
   border: 0;
 }
 .product-view .product-shop {
-  width: 50%;
+  width: 60%;
   float: right;
 }
 .product-view .product-shop .product-name {
@@ -5046,7 +5046,7 @@ p.product-name a:hover {
 }
 .product-view .add-to-cart-wrapper,
 .product-view .block-related {
-  width: 50%;
+  width: 60%;
   float: right;
   clear: right;
 }
@@ -5087,7 +5087,7 @@ p.product-name a:hover {
   }
 }
 .product-img-box {
-  width: 50%;
+  width: 40%;
   float: left;
 }
 .product-img-box .product-name h1 {
@@ -6438,7 +6438,7 @@ p.product-name a:hover {
   border-radius: 0;
   margin-bottom: 10px;
   text-align: center;
-  width: 3.2em;
+  width: 4em;
 }
 .cart-table .product-cart-actions .button {
   margin-bottom: 5px;

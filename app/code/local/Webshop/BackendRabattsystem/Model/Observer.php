@@ -40,13 +40,14 @@ class Webshop_BackendRabattsystem_Model_Observer{
                 //Get discount data from the database
                 $resource = Mage::getSingleton('core/resource');
                 $readConnection = $resource->getConnection('core_read');
-                $query = 'SELECT * FROM custom_discount;';
+                $query = 'SELECT * FROM custom_discount ORDER BY setAfter ASC;';
                 $results = $readConnection->fetchAll($query);
 
                 //Check if the discount criteria are fulfilled
                 foreach ($results as $result){
                     if($discount < $result['discount'] && $totalOrderAmount > $result['setAfter']){
                         $discount = $result['discount'];
+                        $product->setData('custom_discount',$discount*100);
                     }
                 }
 
