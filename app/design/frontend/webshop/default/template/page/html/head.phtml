@@ -32,6 +32,12 @@ $results = $readConnection->fetchAll($query);
 
 $row = $results[0]['path'];
 
+
+$query2 = 'SELECT value FROM core_config_data WHERE path = "web/secure/base_url"';
+$results2 = $readConnection->fetchAll($query2);
+
+$row2 = $results2[0]['value'];
+
 ?>
 <meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
 <title><?php echo $this->getTitle() ?></title>
@@ -54,4 +60,4 @@ $row = $results[0]['path'];
 <?php echo $this->helper('core/js')->getTranslatorScript() ?>
 <?php echo $this->getIncludes() ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $row ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo $row2 . $row ?>">
