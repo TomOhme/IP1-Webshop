@@ -56,6 +56,7 @@
                 <action method="addJs"><script>webshop/webshop.js</script></action>
                 <action method="addJs"><script>webshop/validation.js</script></action>
                 <action method="addJs"><script>webshop/js.js</script></action>
+                <action method="addJs"><script>webshop/jquery.autotab.js</script></action>
 
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
