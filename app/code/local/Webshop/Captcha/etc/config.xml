@@ -29,6 +29,14 @@
                     </captcha_register>
                 </observers>
             </controller_action_predispatch_checkout_onepage_savebilling>
+            <controller_action_predispatch_customer_account_createpost>
+                <observers>
+                    <captcha>
+                        <class>captcha/observer</class>
+                        <method>checkUserCreate</method>
+                    </captcha>
+                </observers>
+            </controller_action_predispatch_customer_account_createpost>
         </events>
     </global>
 </config>

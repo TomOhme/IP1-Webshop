@@ -185,12 +185,26 @@
                 <?php endif ?>
             </ul>
         </div>
-        <div class="buttons-set">
+        <div class="buttons-set" id="buttons-container">
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
             <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="back-link"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
             <button type="submit" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Submit')) ?>" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
         </div>
     </form>
+
+    <!-- François 20160522 - on press of "continue" button, it will reset the captcha -->
+    <script>
+        var $j = jQuery.noConflict();
+        $j(document).ready(function(){
+            $j("#buttons-container").click(function(){
+                var recaptchaframe = $j('#recaptcha_html_element').find('iframe');
+                var recaptchaSoure = recaptchaframe[0].src;
+                recaptchaframe[0].src = '';
+                recaptchaframe[0].src = recaptchaSoure;
+            });
+        });
+    </script>
+
     <script type="text/javascript">
     //<![CDATA[
         var dataForm = new VarienForm('form-validate', true);

@@ -112,6 +112,7 @@
                 </li>
                 <li class="fields">
                     <div class="field">
+
                         <label for="billing:country_id" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
                         <div class="input-box">
                             <!--- remove standard country checkbox -->
@@ -201,13 +202,27 @@
     <?php endif; ?>
     <div class="buttons-set" id="billing-buttons-container">
         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-        <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue')) ?>" class="button" onclick="billing.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
-        <span class="please-wait" id="billing-please-wait" style="display:none;">
+        <button type="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue')) ?>" class="button" onclick="billing.save();"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+            <span class="please-wait" id="billing-please-wait" style="display:none;">
             <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Loading next step...')) ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Loading next step...')) ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
         </span>
     </div>
 </fieldset>
 </form>
+
+<!-- François 20160522 - on press of "continue" button, it will reset the captcha -->
+<script>
+    var $j = jQuery.noConflict();
+    $j(document).ready(function(){
+        $j("#billing-buttons-container").click(function(){
+            var recaptchaframe = $j('#recaptcha_html_element').find('iframe');
+            var recaptchaSoure = recaptchaframe[0].src;
+            recaptchaframe[0].src = '';
+            recaptchaframe[0].src = recaptchaSoure;
+        });
+    });
+</script>
+
 <script type="text/javascript">
 //<![CDATA[
     var billing = new Billing('co-billing-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveBilling') ?>');
