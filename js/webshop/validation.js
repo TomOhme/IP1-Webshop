@@ -10,8 +10,7 @@ Validation.add('validate-ch-phone', 'Bitte geben Sie eine korrekte Telefonnummer
     return Validation.get('IsEmpty').test(v) || /^\d{10}$/.test(v);
 });
 Validation.add('validate-max-password', 'Bitte geben Sie ein Passwort mit weniger als 840 Zeichen ein.', function(v) {
-    var pass=v
-    return !(pass.length>840);
+    return !(v.length>840);
 });
 Validation.add('validate-no-numerics', 'Bitte geben Sie keine Zahlen ein.', function(v) {
     return Validation.get('IsEmpty').test(v) ||  !/[^\D]/.test(v);
