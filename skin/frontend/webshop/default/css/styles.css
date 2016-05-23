@@ -7908,12 +7908,12 @@ body.customer-account .sidebar .block-reorder ol#cart-sidebar-reorder p.product-
 
 .form-list .customer-dob .dob-month,
 .form-list .customer-dob .dob-day {
-  width: 40px;
+  width: 50px;
   float: left;
   margin-right: 10px;
 }
 .form-list .customer-dob .dob-year {
-  width: 80px;
+  width: 70px;
   float: left;
 }
 

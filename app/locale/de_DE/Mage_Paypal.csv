@@ -539,7 +539,7 @@
 "Specifies what the Order Valid Period is on the merchant’s PayPal account. It must mirror the setting in PayPal.","Diese Wert gibt die Dauer an, die eine Bestellung im PayPal-Konto des Händlers gültig ist. Diese Einstellung muss mit den Einstellungen bei PayPal übereinstimmen."
 "State/Province","Bundesland"
 "Static","Statisch"
-"Street Address","Strasse"
+"Street Address","Strasse, Nr."
 "Street Address %s","Strasse %s"
 "Submitting order information...","Bestellung wird übermittelt …"
 "Subscriber name is too long.","Abonnentenname ist zu lang."
