@@ -13,3 +13,6 @@ Validation.add('validate-max-password', 'Bitte geben Sie ein Passwort mit wenige
     var pass=v
     return !(pass.length>840);
 });
+Validation.add('validate-no-numerics', 'Bitte geben Sie keine Zahlen ein.', function(v) {
+    return Validation.get('IsEmpty').test(v) ||  !/[^\D]/.test(v);
+});

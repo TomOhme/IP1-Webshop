@@ -107,7 +107,7 @@
                                        title="<?php echo Mage::helper('core')->quoteEscape($this->__('City')) ?>"
                                        name="shipping[city]"
                                        value="<?php echo $this->escapeHtml($this->getAddress()->getCity()) ?>"
-                                       class="input-text <?php echo $this->helper('customer/address')->getAttributeValidationClass('city') ?>"
+                                       class="input-text validate-no-numerics <?php echo $this->helper('customer/address')->getAttributeValidationClass('city') ?>"
                                        id="shipping:city" onchange="shipping.setSameAsBilling(false);"/>
                             </div>
                         </div>
