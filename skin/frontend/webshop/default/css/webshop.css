@@ -104,3 +104,15 @@ span.customNav
     vertical-align: middle;
     position: relative;
 }
+
+.block.block-layered-nav.block-layered-nav--no-filters
+{
+    max-width: 200px;
+}
+
+.std img
+{
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
