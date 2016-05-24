@@ -61,8 +61,8 @@
     <div class="page-header-container">
          <div id="page-header-logo">
             <a class="logo" href="<?php echo $this->getUrl('') ?>">
-                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
-                <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />
+                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>?<?php echo date("his"); ?>" class="large" />
+                <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>?<?php echo date("his"); ?>" class="small" />
             </a>
 
             <?php include('header-text.phtml'); ?>
