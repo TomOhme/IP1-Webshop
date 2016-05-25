@@ -388,7 +388,11 @@ $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStore
                 </span>
                 </p>
                 <br>
-                <p class="price-label"><?php echo "Ihr Rabatt:  ". $_product->getData('custom_discount'). /*round(100 - (100 / $_price * $_finalPrice),0, PHP_ROUND_HALF_UP).*/" %"; ?></p>
+                <?php
+                if($_product->getData('custom_discount' !== null)){
+                    ?><p class="price-label"><?php echo "Ihr Rabatt:  ". $_product->getData('custom_discount')." %"; ?></p><?php
+                }
+                ?>
             <?php endif; ?>
         <?php endif; ?>
 
