@@ -1,0 +1,18 @@
+<?php
+/**
+ * Inserts payment instructions into email if method of payment is bank transfer
+ * Usage in email templates: {{block type='core/template' area='frontend' template='email/order/bankdetails.phtml' order=$order store=$store}}
+ * User: François Martin
+ * Date: 25.05.16
+ * Time: 18:32
+ */
+?>
+<?php $_order = $this->getOrder(); ?>
+
+<?php if(!is_null($_order) && $_order->getPayment()->getMethodInstance()->getCode() == 'banktransfer') : ?>
+    <?php
+    $instructions = $_order->getPayment()->getMethodInstance()->getInstructions(); // get payment instructions from order
+    echo nl2br($instructions) // output payment instructions into email
+    ?>
+
+<?php endif; ?>
